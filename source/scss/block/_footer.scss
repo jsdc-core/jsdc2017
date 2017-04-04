@@ -1,0 +1,15 @@
+#footer {
+  .copyright {
+    font-size: 0.8em;
+    list-style: none;
+    padding: 0;
+
+    a{
+      color: $jsdc-y - #222;
+      &:hover{
+        color: $jsdc-y;
+        text-decoration: none;
+      }
+    }
+  }
+}
