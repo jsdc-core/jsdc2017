@@ -4,14 +4,14 @@ $screen-md: 992px;
 
 /* Medium devices (tables, 425px and up) */
 @media (min-width: $screen-xs) {
-  
+
   /* Header */
   #header {
     padding: 15vh 40px 0;
 
     .title {
       height: 48vh;
-      
+
       h2 {
         padding: 5% 0;
       }
@@ -25,11 +25,11 @@ $screen-md: 992px;
   /* News */
   #news{
     padding: 80px 40px 0;
-    
+
     #news-wrapper{
       padding: 40px;
     }
-    
+
     #news-line{
       &:after {
         height: 80px;
@@ -51,7 +51,7 @@ $screen-md: 992px;
       }
     }
   }
-  
+
   /* Speaker */
   #speaker{
     padding: 80px 60px;
@@ -62,7 +62,7 @@ $screen-md: 992px;
       }
     }
   }
-  
+
   /* Last JSDC */
   #last-year{
 
@@ -70,7 +70,7 @@ $screen-md: 992px;
       padding: 15vh 8% 0;
     }
   }
-  
+
   /* Sponsor */
   #sponsor{
     padding: 80px 60px;
@@ -84,10 +84,10 @@ $screen-md: 992px;
 
 /* Medium devices (tables, 768px and up) */
 @media (min-width: $screen-sm) {
-  
+
   #header {
     padding: 12vh 0;
-    
+
     .title {
       height: 50vh;
     }
@@ -96,15 +96,15 @@ $screen-md: 992px;
       margin-top: 7%;
     }
   }
-  
+
   /* News */
   #news{
     padding: 80px 0 0;
-    
+
     #news-wrapper{
       padding: 40px 60px;
     }
-    
+
     .date{
       width: 60px;
       height: 60px;
@@ -116,21 +116,21 @@ $screen-md: 992px;
     .news-container{
       .news{
         padding: 16px 0;
-        
+
         .news-title,{
           text-align: left;
           line-height: 1.6;
         }
       }
     }
-    
+
     #news-line{
       &:after {
         height: 80px;
       }
     }
   }
-  
+
   /* About */
   #about{
     padding: 80px 0 0;
@@ -139,7 +139,7 @@ $screen-md: 992px;
       padding: 60px 40px;
     }
   }
-  
+
   /* Speaker */
   #speaker{
     padding: 80px 0;
@@ -154,16 +154,16 @@ $screen-md: 992px;
       }
     }
   }
-  
+
   /* Last JSDC */
   #last-year{
     padding: 0;
   }
-  
+
   /* Sponsor */
   #sponsor{
     padding: 80px 0;
-    
+
     .typeform-button {
       margin: 0 20px;
     }
@@ -173,18 +173,18 @@ $screen-md: 992px;
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: $screen-md) {
-  
+
   /* Header */
   #header {
     padding: 12vh 0;
-    
+
     .title{
 
       h2 {
-        font-size: 32px;
+        font-size: 60px;
         padding: 40px 0;
       }
-      
+
       h5 {
         span{
           font-size: 24px;
@@ -192,7 +192,7 @@ $screen-md: 992px;
         }
       }
     }
-    
+
     p {
       margin: 30px 0 0;
       font-size: 24px;
@@ -206,32 +206,32 @@ $screen-md: 992px;
       margin-top: 5%;
     }
   }
-  
+
   /* News */
   #news{
     padding: 120px 0 0;
-    
+
     #news-wrapper{
       padding: 60px 80px;
     }
-    
+
     .major{
       h2{
         font-size: 32px;
       }
     }
-    
+
     #news-line{
       &:after {
         height: 120px;
       }
     }
   }
-  
+
   /* About */
   #about{
     padding: 120px 0 0;
-    
+
     #about-jsdc{
       padding: 80px 60px;
 
@@ -251,7 +251,7 @@ $screen-md: 992px;
 
     .row + .row{
       padding-top: 80px;
-      
+
       .major {
         h2{
           font-size: 32px;
@@ -267,14 +267,14 @@ $screen-md: 992px;
         padding-top: 60px;
       }
     }
-    
+
     #about-line{
       &:after {
         height: 120px;
       }
     }
   }
-  
+
   /* Speaker */
   #speaker{
     padding: 100px 0;
@@ -285,7 +285,7 @@ $screen-md: 992px;
       }
     }
   }
-  
+
   /* Last JSDC */
   #last-year{
     padding: 0;
@@ -300,7 +300,7 @@ $screen-md: 992px;
       }
     }
   }
-  
+
   /* Sponsor */
   #sponsor{
     padding: 80px 0;
