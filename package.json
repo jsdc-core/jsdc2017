@@ -1,7 +1,7 @@
 {
-  "name": "jsdc2016",
+  "name": "jsdc2017",
   "version": "1.0.0",
-  "description": "jsdc2016",
+  "description": "jsdc2017",
   "private": true,
   "main": "index.js",
   "scripts": {

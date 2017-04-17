@@ -1,4 +1,4 @@
-# jsdc2016
+# jsdc2017
 
 ### :: step 1
 
@@ -9,9 +9,9 @@
 `open http://localhost:3000/`
 
 ## 目前檔案結構
-  
+
   >  debug 小技巧
-  
+
   >  將 gulpfile.js 檔案的第36行( .pipe(plugins.uglify()) ) 隱閉起來，編譯出來的 main.min.js 就不會是 min 的 js，比較好抓錯誤
 
   ```
@@ -38,7 +38,7 @@
 
 ##### :: Header
 ##### :: Main
-  
+
   - Banner
   - 何謂 JSDC
   - 最新消息
