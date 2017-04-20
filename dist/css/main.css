@@ -873,7 +873,6 @@ body.is-loading #header:after {
       display: inline-block;
       height: 60px;
       width: 1px;
-      width: 2px;
       position: relative;
       left: -1px; }
 
@@ -894,7 +893,7 @@ body.is-loading #header:after {
       display: block;
       font-size: 20px; }
       #last-year .last-content .button:hover {
-        background-color: #ffd54f;
+        background-color: rgba(255, 213, 79, 0.4);
         box-shadow: inset 0 0 0 0 #34459e;
         text-decoration: none;
         color: white; }
@@ -972,7 +971,8 @@ body.is-loading #header:after {
   list-style: none;
   padding: 0; }
   #footer .copyright a {
-    color: #ddb32d; }
+    color: #ddb32d;
+    margin-left: 5px; }
     #footer .copyright a:hover {
       color: #FFD54F;
       text-decoration: none; }
