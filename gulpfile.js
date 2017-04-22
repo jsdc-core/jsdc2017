@@ -38,9 +38,21 @@ gulp.task('script', function() {
     .pipe(gulp.dest('./dist/js'));
 });
 
+// 壓縮 images 檔案大小
+gulp.task('imagemin', function() {
+  return gulp.src('./source/images/*')
+    .pipe(plugins.imagemin([
+      plugins.imagemin.jpegtran({progressive: true}),
+      plugins.imagemin.optipng({optimizationLevel: 5}),
+    ],
+    {verbose: true}
+    ))
+    .pipe(gulp.dest('./dist/images'))
+});
+
 // 清掉 dist 裡面 css 跟 js 的資料夾
 gulp.task('clean', function() {
-  return del(['./dist/css/*.css', './dist/css/*.map', './dist/js/*.js']);
+  return del(['./dist/css/*.css', './dist/css/*.map', './dist/js/*.js', '/dist/images/*']);
 });
 
 gulp.task('browser-sync', function() {
@@ -53,7 +65,7 @@ gulp.task('browser-sync', function() {
   });
 });
 
-gulp.task('build', ['scss', 'script', 'jade']);
+gulp.task('build', ['scss', 'script', 'imagemin', 'jade']);
 
 gulp.task('serve', ['clean', 'build', 'browser-sync'], function () {
   gulp.watch('./source/scss/**/*.scss', ['scss', reload]);
