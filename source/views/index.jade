@@ -9,21 +9,21 @@ block content
         .title
           img.image.img-responsive.lazy(itemprop="image" data-original='./dist/images/jsdc-logo.png', alt='JSDC 2017')
           h2 全民 Coder 時代
-          h5.cd-headline.letters.type.hide
-            span Build&nbsp;
-            span.cd-words-wrapper.waiting
-              b.is-visible Anything
-              b Website
-              b Webapp
-              b Mobile App
-              b Arduino
-              b Raspberry Pi
-              b Robot
-            span with JavaScript
+          //- h5.cd-headline.letters.type.hide
+          //-   span Build&nbsp;
+          //-   span.cd-words-wrapper.waiting
+          //-     b.is-visible Anything
+          //-     b Website
+          //-     b IoT
+          //-     b FinTech
+          //-     b Chatbot
+          //-     b Machine Learning
+          //-     b Artificial Intelligence
+          //-   span with JavaScript
         p.c-bold.c-font-white 今年 11 月 4 - 5 日，強勢登場
         a(href="https://goo.gl/maps/dwvvEzHhQUQ2" data-mode="1" target="_blank" style="color: #fff")
-          i.fa.fa-map-marker.fa-fw
-          | 台大社科院
+          i.fa.fa-map-marker(style="margin-right: 5px;")
+          | 臺灣大學 社會科學院
         ul.actions
           li
             a.button(href='#news') 繼續探索
@@ -89,7 +89,7 @@ block content
       .row#about-jsdc
         .col-xs-12.col-md-7
           header.major
-            h2 What's JSDC ?
+            h2 JSDC 是什麼?
           p JavaScript 開發者年會 (JavaScript Developers Conference，簡稱 JSDC) 是台灣最⼤的 JavaScript 年度性技術研討會，旨在提供台灣中⾼階 JavaScript 技術人才與世界最新 JavaScript 相關技術討論與分享。
         .col-xs-12.col-md-5
           img.image.img-responsive.lazy(data-original='./dist/images/jsdc-spot.jpg', alt='JSDC 2016 現場')
@@ -106,16 +106,33 @@ block content
             .fb-share-button(data-href='http://2016.jsdc.tw/zh_tw/' data-layout='button_count')
             include partials/_fb-share
         .col-xs-12
-          img.image.fit.lazy(data-original='./dist/images/jsdc-2016.jpg', alt='JSDC 2016 工作人員')
+          img.image.fit.lazy(data-original='./dist/images/jsdc-2016-speaker.jpg', alt='JSDC 2016 講者')
 
   section#speaker
     #speaker-line
     .container
       .row
         .col.xs-12.text-center
-          //- a.typeform-share.typeform-button.c-bold(href="https://jsdc.typeform.com/to/kAQ0yC" data-mode="1" target="_blank" style="width:50%;float:left;margin:0;border-radius: 4px 0 0 4px;padding:0;") 成為講師
-          a.typeform-share.typeform-button.c-bold(href="https://goo.gl/forms/js6TRC9arjR0LBaF2" data-mode="1" target="_blank" style="width:50%;float:left;margin:0;border-radius: 4px 0 0 4px;padding:0;") 成為講師
-          a.typeform-share.typeform-button.c-bold(href="https://goo.gl/forms/M3k34a1dktk3WUOq1" data-mode="1" target="_blank" style="width:50%;float:left;margin:0;border-radius: 0 4px 4px 0;padding:0;") 成為志工
+          a.typeform-share.typeform-button.c-bold(href="https://goo.gl/forms/js6TRC9arjR0LBaF2" data-mode="1" target="_blank" style="width:100%;float:left;margin:0;border-radius: 4px 0 0 4px;padding:0;") 成為講師
+
+      .row
+        .col-xs-12.paragraph
+          header.major.text-center
+            h2 志工招募
+          p.text-center
+            | 好奇、熱血、學習是推動一場又一場活動進行原動力。
+          p.text-center
+            | 加入我們，與我們一起認識 JSDC。
+        .col-xs-12(style="padding: 0;")
+          img.image.fit.lazy(data-original='./dist/images/jsdc-2016-volunteers.jpg', style="margin: 0;", alt='JSDC 2016 工作人員')
+
+
+  section#volunteers
+    #volunteers-line
+    .container
+      .row
+        .col.xs-12.text-center
+          a.typeform-share.typeform-button.c-bold(href="https://goo.gl/forms/M3k34a1dktk3WUOq1" data-mode="1" target="_blank" style="width:100%;float:right;margin:0;border-radius: 0 4px 4px 0;padding:0;") 成為志工
         .clearfix
 
   section#last-year
@@ -139,5 +156,11 @@ block content
         .col.xs-12.text-center
           header.major
             h2 JSDC 2017 年度贊助
-          //- a.typeform-share.typeform-button.c-bold(href="https://jsdc.typeform.com/to/HFli5P" data-mode="1" target="_blank") 贊助我們
           a.typeform-share.typeform-button.c-bold(href="https://goo.gl/forms/uIF7hMhfYP1dZQrE2" data-mode="1" target="_blank") 贊助我們
+
+//- block js
+//-   script.
+//-     $.get('http://blog.jsdc.tw', function(data){
+//-       const blogContent = data.replace(/\r\n|\n|\s+/g,"");
+//-       //- console.log('blogContent:: ', blogContent)
+//-     })

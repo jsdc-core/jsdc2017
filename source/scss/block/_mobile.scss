@@ -54,13 +54,17 @@ $screen-md: 992px;
 
   /* Speaker */
   #speaker{
-    padding: 80px 60px;
+    padding: 80px 60px 0;
 
     #speaker-line{
       &:after {
         height: 80px;
       }
     }
+  }
+
+  #volunteers{
+    padding: 80px 60px;
   }
 
   /* Last JSDC */
@@ -142,7 +146,7 @@ $screen-md: 992px;
 
   /* Speaker */
   #speaker{
-    padding: 80px 0;
+    padding: 80px 0 0;
 
     .typeform-button {
       margin: 0 20px;
@@ -153,6 +157,10 @@ $screen-md: 992px;
         height: 80px;
       }
     }
+  }
+
+  #volunteers{
+    padding: 80px 0;
   }
 
   /* Last JSDC */
@@ -264,7 +272,7 @@ $screen-md: 992px;
         line-height: 2.5;
       }
       .image{
-        padding-top: 60px;
+        margin-top: 60px;
       }
     }
 
@@ -277,13 +285,17 @@ $screen-md: 992px;
 
   /* Speaker */
   #speaker{
-    padding: 100px 0;
+    padding: 100px 0 0;
 
     #speaker-line{
       &:after {
         height: 100px;
       }
     }
+  }
+
+  #volunteers {
+    padding: 80px 0;
   }
 
   /* Last JSDC */
