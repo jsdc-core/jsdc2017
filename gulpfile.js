@@ -22,11 +22,11 @@ gulp.task('scss', function() {
     .pipe(gulp.dest('./dist/css'));
 });
 
-// 編譯 jade
-gulp.task('jade', function() {
+// 編譯 pug
+gulp.task('pug', function() {
   return gulp.src('source/views/*.pug')
     .pipe(plugins.pug())
-    .pipe(gulp.dest('.'));
+    .pipe(gulp.dest('./dist'));
 });
 
 // 將 js 編譯成 min js
@@ -60,17 +60,17 @@ gulp.task('browser-sync', ['build'], function() {
     open: !!argv.open,
     notify: !!argv.notify,
     server: {
-      baseDir: './'
+      baseDir: './dist'
     }
   });
 });
 
-gulp.task('build', ['scss', 'script', 'imagemin', 'jade']);
+gulp.task('build', ['scss', 'script', 'imagemin', 'pug']);
 
-gulp.task('serve', ['clean', 'build', 'browser-sync'], function () {
+gulp.task('serve-dev', ['clean', 'build', 'browser-sync'], function () {
   gulp.watch('./source/scss/**/*.scss', ['scss', reload]);
   gulp.watch('./source/js/*.js', ['script', reload]);
-  gulp.watch('./source/views/**/*.jade', ['jade', reload]);
+  gulp.watch('./source/views/**/*.pug', ['pug', reload]);
 });
 
-gulp.task('default', ['serve']);
+gulp.task('default', ['serve-dev']);
