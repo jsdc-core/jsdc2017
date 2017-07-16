@@ -5,10 +5,23 @@
   "private": true,
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm i && ./node_modules/gulp/bin/gulp.js"
+    "start": "./node_modules/gulp/bin/gulp.js"
   },
-  "author": "webber0928",
+  "author": {
+    "name": "JSDC Taiwan",
+    "email": "core@jsdc.tw",
+    "url": "http://2017.jsdc.tw"
+  },
+  "contributors": [
+    {
+      "name": "webber0928"
+    },
+    {
+      "name": "Ivan Wei (Wei, Hong-Lin)",
+      "email": "scorpionseed@gmail.com",
+      "url": "https://blog.ivanwei.co"
+    }
+  ],
   "license": "MIT",
   "devDependencies": {
     "browser-sync": "^2.11.2",
@@ -16,9 +29,9 @@
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-imagemin": "^3.2.0",
-    "gulp-jade": "^1.1.0",
     "gulp-load-plugins": "^1.2.0",
     "gulp-plumber": "^1.1.0",
+    "gulp-pug": "^3.3.0",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.2.0",
     "gulp-sourcemaps": "^1.6.0",
