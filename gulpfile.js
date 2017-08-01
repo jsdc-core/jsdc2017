@@ -66,7 +66,7 @@ gulp.task('copyFontAwesome', function(){
 gulp.task('clean', function() {
   return del(['./dist/css/*.css', './dist/css/*.map', './dist/js/*.js', '/dist/images/*']);
 });
-≥
+
 gulp.task('browser-sync', ['build'], function() {
   browserSync({
     open: !!argv.open,
