@@ -17,6 +17,9 @@
       "name": "webber0928"
     },
     {
+      "name": "Irene"
+    },
+    {
       "name": "Ivan Wei (Wei, Hong-Lin)",
       "email": "scorpionseed@gmail.com",
       "url": "https://blog.ivanwei.co"
@@ -39,5 +42,8 @@
     "gulp-webserver": "^0.9.1",
     "jquery-lazyload": "^1.9.7",
     "yargs": "^4.3.2"
+  },
+  "dependencies": {
+    "font-awesome": "^4.7.0"
   }
 }

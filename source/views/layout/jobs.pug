@@ -1,0 +1,11 @@
+extends ../partials/_layout
+
+block content
+  .container#jobs
+    h1 TBD
+
+block js
+  script.
+    setTimeout(function(){
+      document.querySelectorAll('#navbar ul li')[7].classList.add('active');
+    }, 0);

@@ -1,0 +1,56 @@
+extends ../partials/_layout
+
+block content
+  -
+    var sponsors = {
+      'titanium': [
+
+      ],
+      'platinum': [
+
+      ],
+      'gold': [
+
+      ],
+      'silver': [
+
+      ],
+    };
+    var tranformName = {
+      'titanium': '鑽石級',
+      'platinum': '鉑金級',
+      'gold': '金級',
+      'silver': '銀級',
+    };
+
+  .container-fluid#sponsors
+    each sponsorItems, sponsorIndex in sponsors
+      if sponsorItems.length > 0
+        .row
+          .col-md-12
+            h2 #{tranformName[sponsorIndex] || sponsorIndex.toUpperCase()}
+          each item, index in sponsorItems
+            case sponsorIndex
+              when 'titanium'
+                .col-md-12
+                  p 1111
+
+              when 'platinum'
+                .col-md-6
+                  p 2222
+
+              when 'gold'
+                .col-md-4
+                  p 3333
+
+              default
+                .col-md-3
+                  p 4444
+
+
+
+block js
+  script.
+    setTimeout(function(){
+      document.querySelectorAll('#navbar ul li')[6].classList.add('active');
+    }, 0);

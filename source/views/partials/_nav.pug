@@ -1,0 +1,28 @@
+nav#navbar.navbar
+  .container
+    .navbar-header
+      button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar-mobile', aria-expanded='false' aria-controls='#navbar-mobile')
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+
+    .collapse.navbar-collapse#navbar-mobile(aria-expanded='false')
+      ul.nav.navbar-nav
+        li
+          a(href="/") 首頁
+        li
+          a(href="/about.html") 關於
+        li
+          a(href="/news.html") 最新消息
+        li
+          a(href="/venue.html") 會場
+        //- li
+          a(href="/speaker.html") 講者
+        //- li
+          a(href="/agenda.html") 議程
+        //- li
+          a(href="/sponsors.html") 贊助夥伴
+        //- li
+          a(href="/jobs.html") 徵才
+        li#nav-fb-share
+          .fb-share-button(data-href='http://2017.jsdc.tw/' data-layout='button_count')

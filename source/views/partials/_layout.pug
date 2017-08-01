@@ -4,7 +4,7 @@ html(amp lang='zh-hant')
     include ../partials/_meta-tags
 
     //- css 設定
-    link(rel='shortcut icon', href='./favicons/favicon.ico')
+    link(rel='shortcut png', href='./images/jsdc-logo.png')
     link(rel='stylesheet', href='./css/bootstrap.css')
     link(rel='stylesheet', href='./css/font-awesome/css/font-awesome.min.css')
     link(rel='stylesheet', href='./css/main.css')
@@ -24,8 +24,8 @@ html(amp lang='zh-hant')
     block js
 
   body
+    include ../partials/_nav
 
     block content
 
     include ../partials/_footer
-    include ../partials/_type-form

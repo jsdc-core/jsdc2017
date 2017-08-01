@@ -8,18 +8,8 @@ block content
         .title
           img.image.img-responsive.lazy(itemprop="image" data-original='./images/jsdc-logo.png', alt='JSDC 2017')
           h2 全民 Coder 時代
-          //- h5.cd-headline.letters.type
-            span Build&nbsp;
-            span.cd-words-wrapper.waiting
-              b.is-visible Anything
-              b Website
-              b IoT
-              b FinTech
-              b Chatbot
-              b Machine Learning
-              b Artificial Intelligence
-            span with JavaScript
-        p.c-bold.c-font-white 今年 11 月 4 - 5 日，強勢登場
+
+        p.c-bold.c-font-white 今年 11 月 4 - 5 日正式登場
         a(href="https://goo.gl/maps/dwvvEzHhQUQ2" data-mode="1" target="_blank" style="color: #fff")
           i.fa.fa-map-marker(style="margin-right: 5px;")
           | 臺灣大學 社會科學院
@@ -33,11 +23,12 @@ block content
       .row#news-wrapper
         .col-xs-12
           header.major.text-center
-            h2 最新消息
+            h2 售票資訊
         .news-container
-          span 讀取資料中…
+          iframe.kktix(src='https://kktix.com/tickets_widget?slug=jsdc2017', frameborder='0', height='250px', width='100%', vspace='0', hspace='0', marginheight='5', marginwidth='5', scrolling='auto', allowtransparency='true')
 
-  section#about
+
+  //- section#about
     #about-line
     .container
       .row#about-jsdc
@@ -62,14 +53,14 @@ block content
         .col-xs-12
           img.image.fit.lazy(data-original='./images/jsdc-2016-speaker.jpg', alt='JSDC 2016 講者')
 
-  section#speaker
+  //- section#speaker
     #speaker-line
     .container
       .row
         .col.xs-12.text-center
           a.typeform-share1.typeform-button.c-bold(href="https://goo.gl/forms/js6TRC9arjR0LBaF2" data-mode="1" target="_blank" style="width:100%;float:left;margin:0;border-radius: 4px 0 0 4px;padding:0;") 成為講師
 
-      .row
+      //- .row
         .col-xs-12.paragraph
           header.major.text-center
             h2 志工招募
@@ -81,7 +72,7 @@ block content
           img.image.fit.lazy(data-original='./images/jsdc-2016-volunteers.jpg', style="margin: 0;", alt='JSDC 2016 工作人員')
 
 
-  section#volunteers
+  //- section#volunteers
     #volunteers-line
     .container
       .row
@@ -89,7 +80,7 @@ block content
           a.typeform-share1.typeform-button.c-bold(href="https://goo.gl/forms/M3k34a1dktk3WUOq1" data-mode="1" target="_blank" style="width:100%;float:right;margin:0;border-radius: 0 4px 4px 0;padding:0;") 成為志工
         .clearfix
 
-  section#last-year
+  //- section#last-year
     .container
       .row
         .col-xs-12.col-sm-6
@@ -112,4 +103,8 @@ block content
             h2 JSDC 2017 年度贊助
           a.typeform-share1.typeform-button.c-bold(href="https://goo.gl/forms/uIF7hMhfYP1dZQrE2" data-mode="1" target="_blank") 贊助我們
 
-  script(src='./js/blogCrawler.min.js')
+block js
+  script.
+    setTimeout(function(){
+      document.querySelectorAll('#navbar ul li')[0].classList.add('active');
+    }, 0);

@@ -44,13 +44,13 @@
       // $('.scrolly').scrolly();
 
       // backstretch
-      $('#header').backstretch([
-        "./images/jsdc-scenario-1.jpg",
-        "./images/jsdc-scenario-2.jpg",
-        "./images/jsdc-scenario-3.jpg",
-        "./images/jsdc-scenario-4.jpg",
-        "./images/jsdc-scenario-5.jpg",
-      ], {duration: 3000, fade: 1200, lazyload: true,});
+      // $('#header').backstretch([
+      //   "./images/jsdc-scenario-1.jpg",
+      //   "./images/jsdc-scenario-2.jpg",
+      //   "./images/jsdc-scenario-3.jpg",
+      //   "./images/jsdc-scenario-4.jpg",
+      //   "./images/jsdc-scenario-5.jpg",
+      // ], {duration: 3000, fade: 1200, lazyload: true,});
 
       // lazyload
       $('div.lazy').lazyload({

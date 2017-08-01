@@ -1,0 +1,144 @@
+extends ../partials/_layout
+
+block content
+  //- primary 、 success 、 info 、 danger 、 warning
+  -
+    var agenda = {
+      '11/04(六)': {
+        '101': [
+          {time: '08:30 ~ 09:00', title: '', description: '', name: '', slideURL: '', youtube: '', twitter:'', fb: '', level: 'info'},
+          {time: '09:00 ~ 09:10', title: '', description: '', name: '', slideURL: '', youtube: '', twitter:'', fb: '', level: ''},
+          {time: '09:10 ~ 10:00', title: '', description: '', name: '', slideURL: '', youtube: '', twitter:'', fb: '', level: ''},
+          {time: '10:00 ~ 10:30', title: '', description: '', name: '', slideURL: '', youtube: '', twitter:'', fb: '', level: ''},
+          {time: '10:30 ~ 11:10', title: '', description: '', name: '', slideURL: '', youtube: '', twitter:'', fb: '', level: ''},
+          {time: '11:10 ~ 11:30', title: '', description: '', name: '', slideURL: '', youtube: '', twitter:'', fb: '', level: ''},
+          {time: '11:30 ~ 12:10', title: '', description: '', name: '', slideURL: '', youtube: '', twitter:'', fb: '', level: ''},
+          {time: '12:10 ~ 13:10', title: '', description: '', name: '', slideURL: '', youtube: '', twitter:'', fb: '', level: ''},
+          {time: '13:10 ~ 14:00', title: '', description: '', name: '', slideURL: '', youtube: '', twitter:'', fb: '', level: ''},
+          {time: '14:00 ~ 14:20', title: '', description: '', name: '', slideURL: '', youtube: '', twitter:'', fb: '', level: ''},
+          {time: '14:20 ~ 15:00', title: '', description: '', name: '', slideURL: '', youtube: '', twitter:'', fb: '', level: ''},
+          {time: '15:00 ~ 15:30', title: '', description: '', name: '', slideURL: '', youtube: '', twitter:'', fb: '', level: ''},
+          {time: '15:30 ~ 16:10', title: '', description: '', name: '', slideURL: '', youtube: '', twitter:'', fb: '', level: ''},
+          {time: '16:10 ~ 16:20', title: '', description: '', name: '', slideURL: '', youtube: '', twitter:'', fb: '', level: ''},
+          {time: '16:20 ~ 17:00', title: '', description: '', name: '', slideURL: '', youtube: '', twitter:'', fb: '', level: ''},
+          {time: '17:00 ~ 17:30', title: '', description: '', name: '', slideURL: '', youtube: '', twitter:'', fb: '', level: ''},
+        ],
+        '201': [
+          {time: '08:30 ~ 09:00', title: '', description: '', name: '', slideURL: '', youtube: '', twitter:'', fb: '', level: ''},
+          {time: '09:00 ~ 09:10', title: '', description: '', name: '', slideURL: '', youtube: '', twitter:'', fb: '', level: ''},
+          {time: '09:10 ~ 10:00', title: '', description: '', name: '', slideURL: '', youtube: '', twitter:'', fb: '', level: ''},
+          {time: '10:00 ~ 10:30', title: '', description: '', name: '', slideURL: '', youtube: '', twitter:'', fb: '', level: ''},
+          {time: '10:30 ~ 11:10', title: '', description: '', name: '', slideURL: '', youtube: '', twitter:'', fb: '', level: ''},
+          {time: '11:10 ~ 11:30', title: '', description: '', name: '', slideURL: '', youtube: '', twitter:'', fb: '', level: ''},
+          {time: '11:30 ~ 12:10', title: '', description: '', name: '', slideURL: '', youtube: '', twitter:'', fb: '', level: ''},
+          {time: '12:10 ~ 13:10', title: '', description: '', name: '', slideURL: '', youtube: '', twitter:'', fb: '', level: ''},
+          {time: '13:10 ~ 14:00', title: '', description: '', name: '', slideURL: '', youtube: '', twitter:'', fb: '', level: ''},
+          {time: '14:00 ~ 14:20', title: '', description: '', name: '', slideURL: '', youtube: '', twitter:'', fb: '', level: ''},
+          {time: '14:20 ~ 15:00', title: '', description: '', name: '', slideURL: '', youtube: '', twitter:'', fb: '', level: ''},
+          {time: '15:00 ~ 15:30', title: '', description: '', name: '', slideURL: '', youtube: '', twitter:'', fb: '', level: ''},
+          {time: '15:30 ~ 16:10', title: '', description: '', name: '', slideURL: '', youtube: '', twitter:'', fb: '', level: ''},
+          {time: '16:10 ~ 16:20', title: '', description: '', name: '', slideURL: '', youtube: '', twitter:'', fb: '', level: ''},
+          {time: '16:20 ~ 17:00', title: '', description: '', name: '', slideURL: '', youtube: '', twitter:'', fb: '', level: ''},
+          {time: '17:00 ~ 17:30', title: '', description: '', name: '', slideURL: '', youtube: '', twitter:'', fb: '', level: ''},
+        ]
+      },
+      '11/05(日)': {
+        '101': [
+          {time: '08:30 ~ 08:50', title: '', description: '', name: '', slideURL: '', youtube: '', twitter:'', fb: '', level: ''},
+          {time: '08:50 ~ 09:00', title: '', description: '', name: '', slideURL: '', youtube: '', twitter:'', fb: '', level: ''},
+          {time: '09:00 ~ 09:50', title: '', description: '', name: '', slideURL: '', youtube: '', twitter:'', fb: '', level: ''},
+          {time: '09:50 ~ 10:20', title: '', description: '', name: '', slideURL: '', youtube: '', twitter:'', fb: '', level: ''},
+          {time: '10:20 ~ 11:00', title: '', description: '', name: '', slideURL: '', youtube: '', twitter:'', fb: '', level: ''},
+          {time: '11:00 ~ 11:20', title: '', description: '', name: '', slideURL: '', youtube: '', twitter:'', fb: '', level: ''},
+          {time: '11:20 ~ 12:00', title: '', description: '', name: '', slideURL: '', youtube: '', twitter:'', fb: '', level: ''},
+          {time: '12:00 ~ 13:00', title: '', description: '', name: '', slideURL: '', youtube: '', twitter:'', fb: '', level: ''},
+          {time: '13:00 ~ 13:50', title: '', description: '', name: '', slideURL: '', youtube: '', twitter:'', fb: '', level: ''},
+          {time: '13:50 ~ 14:10', title: '', description: '', name: '', slideURL: '', youtube: '', twitter:'', fb: '', level: ''},
+          {time: '14:10 ~ 14:50', title: '', description: '', name: '', slideURL: '', youtube: '', twitter:'', fb: '', level: ''},
+          {time: '14:50 ~ 15:20', title: '', description: '', name: '', slideURL: '', youtube: '', twitter:'', fb: '', level: ''},
+          {time: '15:20 ~ 16:00', title: '', description: '', name: '', slideURL: '', youtube: '', twitter:'', fb: '', level: ''},
+          {time: '16:00 ~ 16:20', title: '', description: '', name: '', slideURL: '', youtube: '', twitter:'', fb: '', level: ''},
+          {time: '16:20 ~ 17:00', title: '', description: '', name: '', slideURL: '', youtube: '', twitter:'', fb: '', level: ''},
+          {time: '17:00 ~ 17:30', title: '', description: '', name: '', slideURL: '', youtube: '', twitter:'', fb: '', level: ''},
+        ],
+        '201': [
+          {time: '08:30 ~ 08:50', title: '', description: '', name: '', slideURL: '', youtube: '', twitter:'', fb: '', level: ''},
+          {time: '08:50 ~ 09:00', title: '', description: '', name: '', slideURL: '', youtube: '', twitter:'', fb: '', level: ''},
+          {time: '09:00 ~ 09:50', title: '', description: '', name: '', slideURL: '', youtube: '', twitter:'', fb: '', level: ''},
+          {time: '09:50 ~ 10:20', title: '', description: '', name: '', slideURL: '', youtube: '', twitter:'', fb: '', level: ''},
+          {time: '10:20 ~ 11:00', title: '', description: '', name: '', slideURL: '', youtube: '', twitter:'', fb: '', level: ''},
+          {time: '11:00 ~ 11:20', title: '', description: '', name: '', slideURL: '', youtube: '', twitter:'', fb: '', level: ''},
+          {time: '11:20 ~ 12:00', title: '', description: '', name: '', slideURL: '', youtube: '', twitter:'', fb: '', level: ''},
+          {time: '12:00 ~ 13:00', title: '', description: '', name: '', slideURL: '', youtube: '', twitter:'', fb: '', level: ''},
+          {time: '13:00 ~ 13:50', title: '', description: '', name: '', slideURL: '', youtube: '', twitter:'', fb: '', level: ''},
+          {time: '13:50 ~ 14:10', title: '', description: '', name: '', slideURL: '', youtube: '', twitter:'', fb: '', level: ''},
+          {time: '14:10 ~ 14:50', title: '', description: '', name: '', slideURL: '', youtube: '', twitter:'', fb: '', level: ''},
+          {time: '14:50 ~ 15:20', title: '', description: '', name: '', slideURL: '', youtube: '', twitter:'', fb: '', level: ''},
+          {time: '15:20 ~ 16:00', title: '', description: '', name: '', slideURL: '', youtube: '', twitter:'', fb: '', level: ''},
+          {time: '16:00 ~ 16:20', title: '', description: '', name: '', slideURL: '', youtube: '', twitter:'', fb: '', level: ''},
+          {time: '16:20 ~ 17:00', title: '', description: '', name: '', slideURL: '', youtube: '', twitter:'', fb: '', level: ''},
+          {time: '17:00 ~ 17:30', title: '', description: '', name: '', slideURL: '', youtube: '', twitter:'', fb: '', level: ''},
+        ]
+      }
+    };
+
+  section#agenda
+    .container
+      //- .row#agenda-wrapper
+      .row
+        .col-md-12
+          each rooms, index in agenda
+            .page-header
+              h1 #{index}
+            each agendaContents, agendaIndex in rooms
+              div(style='display:inline-block;width:100%;overflow-y:auto;position:relative;')
+                h2(style="position: absolute;top:"+((index=='11/04(六)' && agendaIndex=='101')?'0':'90')+"px;") #{agendaIndex}
+                ul.timeline.timeline-horizontal
+                  each content, contentIndex in agendaContents
+                    li.timeline-item
+                      .timeline-badge(class=content.level)
+                        i.glyphicon.glyphicon-check
+                      .timeline-panel
+                        if content.time
+                          unless content.title
+                            .timeline-heading
+                              h4.timeline-title
+                                i.fa.fa-clock-o
+                                  |   #{content.time}
+                                br
+                                | TBD
+
+                          else
+                            .timeline-heading
+                              h4.timeline-title
+                                i.fa.fa-clock-o
+                                  |   #{content.time}
+                                br
+                                | #{content.title}
+                              p
+                                | #{content.name}
+                                small.text-muted(style="font-size: 16px;")
+                                  if content.slideURL
+                                    a(href=content.slideURL style="margin-left:15px;")
+                                      i.fa.fa-file-text
+                                  if content.youtube
+                                    a(href=content.youtube style="margin-left:15px;color:#cc181e;")
+                                      i.fa.fa-youtube-play
+                                  if content.twitter
+                                    a(href=content.twitter style="margin-left:15px;color:#00aced;")
+                                      i.fa.fa-twitter
+                                  if content.fb
+                                    a(href=content.fb style="margin-left:15px;color:#3b5998;")
+                                      i.fa.fa-facebook-official
+
+                            .timeline-body
+                              p
+                                | #{content.description}
+
+
+
+block js
+  script.
+    setTimeout(function(){
+      document.querySelectorAll('#navbar ul li')[5].classList.add('active');
+    }, 0);

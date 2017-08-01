@@ -11,7 +11,7 @@ var plugins = require('gulp-load-plugins')({
 
 // 編譯 scss
 gulp.task('scss', function() {
-  return gulp.src('./source/scss/**/*.scss')
+  return gulp.src(['./source/scss/**/*.scss', './source/scss/**/*.css'])
     .pipe(plugins.plumber())
     .pipe(plugins.sourcemaps.init())
     .pipe(plugins.sass())
@@ -24,7 +24,8 @@ gulp.task('scss', function() {
 
 // 編譯 pug
 gulp.task('pug', function() {
-  return gulp.src('source/views/*.pug')
+  return gulp.src(['source/views/*.pug', 'source/views/layout/*.pug'])
+    .pipe(plugins.plumber())
     .pipe(plugins.pug())
     .pipe(gulp.dest('./dist'));
 });
@@ -33,7 +34,7 @@ gulp.task('pug', function() {
 gulp.task('script', function() {
   return gulp.src('./source/js/*.js')
     .pipe(plugins.plumber())
-    .pipe(plugins.uglify())
+    // .pipe(plugins.uglify())
     .pipe(plugins.rename({suffix: '.min'}))
     .pipe(gulp.dest('./dist/js'));
 });
@@ -41,6 +42,7 @@ gulp.task('script', function() {
 // 壓縮 images 檔案大小
 gulp.task('imagemin', function() {
   return gulp.src('./source/images/*')
+    .pipe(plugins.plumber())
     .pipe(plugins.imagemin([
       plugins.imagemin.jpegtran({progressive: true}),
       plugins.imagemin.optipng({optimizationLevel: 5}),
@@ -48,6 +50,16 @@ gulp.task('imagemin', function() {
     {verbose: true}
     ))
     .pipe(gulp.dest('./dist/images'))
+});
+
+gulp.task('GA', function() {
+  return gulp.src('./source/googlea1cf7867353d96e9.html')
+    .pipe(gulp.dest('./dist'))
+});
+
+gulp.task('copyFontAwesome', function(){
+  return gulp.src('./source/scss/font-awesome/fonts/*')
+    .pipe(gulp.dest('./dist/css/font-awesome/fonts'));
 });
 
 // 清掉 dist 裡面 css 跟 js 的資料夾
@@ -65,7 +77,7 @@ gulp.task('browser-sync', ['build'], function() {
   });
 });
 
-gulp.task('build', ['scss', 'script', 'imagemin', 'pug']);
+gulp.task('build', ['scss', 'script', 'imagemin', 'pug', 'copyFontAwesome']);
 
 gulp.task('serve-dev', ['clean', 'build', 'browser-sync'], function () {
   gulp.watch('./source/scss/**/*.scss', ['scss', reload]);

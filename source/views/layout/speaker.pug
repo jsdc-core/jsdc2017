@@ -1,0 +1,33 @@
+extends ../partials/_layout
+
+block content
+  -
+    var speakers = [
+      // {name: '', description: '', image: ''},
+    ];
+
+  section#speaker
+    if speakers.length == 0
+      h2(style="text-align:center;") TBD
+    else
+      each val, index in speakers
+        if index%2 == 0
+          .row.container
+            .col-md-7
+              h2.featurette-heading #{val.name}
+              p.lead #{val.description}
+            .col-md-5
+              img.featurette-image.img-responsive.center-block(width=300 src=val.image)
+        else if index%2 == 1
+          .row.container
+            .col-md-5
+              img.featurette-image.img-responsive.center-block(width=300 src=val.image)
+            .col-md-7
+              h2.featurette-heading #{val.name}
+              p.lead #{val.description}
+
+block js
+  script.
+    setTimeout(function(){
+      document.querySelectorAll('#navbar ul li')[4].classList.add('active');
+    }, 0);
