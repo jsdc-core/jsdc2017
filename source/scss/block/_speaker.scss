@@ -3,6 +3,10 @@
     {
         /*box-shadow:0px 0px 4px -2px #000;*/
         margin: 10px 5px;
+        .is-keynote {
+            position: absolute;
+            top: 0;
+        }
         .img-circle {
             width: 120px;
             height: 120px;
@@ -29,8 +33,7 @@
             }
         }
         .desc {
-            font-size: 14px;
-            line-height: 1.3em;
+            font-size: 13px;
             font-weight: normal;
         }
 
