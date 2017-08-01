@@ -77,7 +77,7 @@ gulp.task('browser-sync', ['build'], function() {
   });
 });
 
-gulp.task('build', ['scss', 'script', 'imagemin', 'pug', 'copyFontAwesome']);
+gulp.task('build', ['scss', 'script', 'imagemin', 'pug', 'copyFontAwesome', 'GA']);
 
 gulp.task('serve-dev', ['clean', 'build', 'browser-sync'], function () {
   gulp.watch('./source/scss/**/*.scss', ['scss', reload]);
