@@ -3,28 +3,73 @@ extends ../partials/_layout
 block content
   -
     var speakers = [
-      // {name: '', description: '', image: ''},
+      {
+        name: '章小飛',
+        description: '是 Angular 開發團隊的 PM，同時帶領 angular.cn 與社群並協助開發者在企業與開源上都能成功的導入 Angular。中國最早的 Angular 開發者是從 Angular 2012，而他是第一位將 Angular 書籍中文化的譯者！從 2016 年起開始加入 Google 團隊至今。',
+        image: 'aaron.png',
+        company: 'Google',
+        links: {
+          blog: 'http://t.cn/Ro8ZAto'
+        }
+      },
+      {
+        name: '彭彭',
+        description: '喜歡技術、更熱愛與人互動。若技術不能轉換成大家都能上手把玩的東西，那有什麼意思呢？耕耘網頁領域超過十五年，全力挖掘 Web 的潛力，特別是JavaScript實作重量級應用的可能性和營利模式。Piconion 主要開發者，擔任前端工程講師超過十年，曾任 COSCUP、Modern Web 講者。',
+        image: 'ponpon.png',
+        company: 'Senior Freelancer',
+        links: {
+          blog: 'http://training.pada-x.com/'
+        }
+      },
+      {
+        name: 'Michael Cheng',
+        description: 'Michael is a software engineer at Google. He develops for the web using Angular and TypeScript. Outside of work, he is passionate about web technologies, the piano, and music.',
+        image: 'michael.jpg',
+        company: 'Google',
+        links: {
+          blog: 'https://www.michaelcheng.us',
+          github: 'https://github.com/mlcheng'
+        }
+      },
+      {
+        name: 'Folio',
+        description: '元配是 JavaScript、真愛是 Rust、小三是 Vim、前任是 PHP、在追求 Erlang、跟 Python 曖昧、天菜是 Front-End Engineering。',
+        // image: '',
+        company: 'Exosite',
+        links: {
+          github: 'https://github.com/sharils'
+        }
+      }
     ];
 
   section#speaker
-    if speakers.length == 0
-      h2(style="text-align:center;") TBD
-    else
-      each val, index in speakers
-        if index%2 == 0
-          .row.container
-            .col-md-7
-              h2.featurette-heading #{val.name}
-              p.lead #{val.description}
-            .col-md-5
-              img.featurette-image.img-responsive.center-block(width=300 src=val.image)
-        else if index%2 == 1
-          .row.container
-            .col-md-5
-              img.featurette-image.img-responsive.center-block(width=300 src=val.image)
-            .col-md-7
-              h2.featurette-heading #{val.name}
-              p.lead #{val.description}
+      if speakers.length == 0
+        h2(style="text-align:center;") TBD
+      else
+        .container
+          .row
+            each val, index in speakers
+              .col-md-6
+                .media
+                  .pull-left
+                    if val.image
+                      img.media-object.dp.img-circle(src='./images/speakers/' + val.image)
+                    else
+                      img.media-object.dp.img-circle(src='./images/jsdc-mascot-150.jpg')
+                  .media-body
+                    h5.media-heading
+                      | #{val.name}
+                      small #{val.company}
+                    div.desc
+                      | #{val.description}
+                    hr(style='margin:8px auto')
+                    if val.links.blog
+                      a.btn.btn-link.btn-github.btn-sm(href=val.links.blog)
+                        i.fa.fa-link
+                    if val.links.github
+                      a.btn.btn-link.btn-link.btn-sm(href=val.links.github)
+                        i.fa.fa-github
+
 
 block js
   script.
