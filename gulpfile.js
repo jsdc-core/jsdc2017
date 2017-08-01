@@ -53,7 +53,7 @@ gulp.task('imagemin', function() {
 });
 
 gulp.task('GA_CNAME', function() {
-  return gulp.src(['./source/googlea1cf7867353d96e9.html', './source/CNAME'])
+  return gulp.src(['./source/googlea1cf7867353d96e9.html', './CNAME'])
     .pipe(gulp.dest('./dist'))
 });
 
@@ -66,7 +66,7 @@ gulp.task('copyFontAwesome', function(){
 gulp.task('clean', function() {
   return del(['./dist/css/*.css', './dist/css/*.map', './dist/js/*.js', '/dist/images/*']);
 });
-
+≥
 gulp.task('browser-sync', ['build'], function() {
   browserSync({
     open: !!argv.open,
