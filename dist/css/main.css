@@ -1216,7 +1216,6 @@ body.is-loading #header:after {
       text-decoration: none; }
 
 #speaker .media {
-  /*box-shadow:0px 0px 4px -2px #000;*/
   margin: 10px 5px; }
   #speaker .media .is-keynote {
     position: absolute;
