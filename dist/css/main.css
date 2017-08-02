@@ -1219,7 +1219,8 @@ body.is-loading #header:after {
   margin: 10px 5px; }
   #speaker .media .is-keynote {
     position: absolute;
-    top: 0; }
+    top: 0;
+    z-index: 10; }
   #speaker .media .img-circle {
     width: 120px;
     height: 120px; }
