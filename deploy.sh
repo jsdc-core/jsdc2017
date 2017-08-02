@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e # stop on error
+# set -e # stop on error
 
 echo add dist folder
 git add -f dist
