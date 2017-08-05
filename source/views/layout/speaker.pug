@@ -17,7 +17,7 @@ block content
       {
         name: 'yosuke-furukawa',
         isKeynote: true,
-        description: 'Yosuke 領導日本 Node.js 社群同時也是 NodeFest 組織的一員，Yosuke 對 ESNext, new protocols like HTTP/2, WebRTC 和測試工具深感興趣。他建立了 tower-of-babel, ES2015 教程工具，現在正進入使用 React 與 Redux 開發 universal 網站應用的世界！',
+        description: 'Yosuke 領導日本 Node.js 社群同時也是 NodeFest 組織的一員，Yosuke 對 ESNext, new protocols like HTTP/2, WebRTC 和測試工具深感興趣。建立了 tower-of-babel, ES2015 教學工具，目前正進入用 React 與 Redux 開發 universal 的網站應用！',
         description_E: 'Yosuke leads the Japan Node.js User Group and is an organizer of NodeFest. Yosuke has an interest in ESNext, new protocols like HTTP/2, WebRTC, and testing tools. He built the tower-of-babel, ES2015 tutorial tool and is now getting into universal web applications using React and Redux.',
         image: 'y_furukawa.jpg',
         company: 'recruit technologies',
@@ -80,74 +80,55 @@ block content
     var loops = [0, 2, 4, 6];
 
   section#speaker
-      if speakers.length == 0
-        h2(style="text-align:center;") TBD
-      else
-        .container
-          each val, index in loops
-            -
-              var speaker1 = speakers[val];
-              var speaker2 = speakers[val+1];
+    .container
+    if speakers.length == 0
+      h2(style="text-align:center;") TBD
+    else
+      .container
+        .grid.row
+          each val, index in speakers
+            .grid-item.col-md-3
+              .thumbnail
+                if val.image
+                  img.img-circle(src='./images/speakers/' + val.image, width='200')
+                else
+                  img.img-circle(src='./images/jsdc-mascot-150.jpg', width='200')
+                .caption
+                  h3.text-center.author-name #{val.name}
+                  .text-center #{val.company}
+                  .text-center
+                    if val.links.blog
+                      a.btn.btn-link.btn-github.btn-sm(href=val.links.blog)
+                        i.fa.fa-link
+                    if val.links.github
+                      a.btn.btn-link.btn-link.btn-sm(href=val.links.github)
+                        i.fa.fa-github
+                    if val.links.twitter
+                      a.btn.btn-link.btn-link.btn-sm(href=val.links.twitter)
+                        i.fa.fa-twitter
+                  div #{val.description}
 
-            .row
-              if speaker1
-                .col-md-6
-                  .media
-                    .pull-left
-                      if speaker1.isKeynote
-                        label.label.label-success.label-sm.is-keynote
-                          | Keynote
-                      if speaker1.image
-                        img.media-object.dp.img-circle(src='./images/speakers/' + speaker1.image)
-                      else
-                        img.media-object.dp.img-circle(src='./images/jsdc-mascot-150.jpg')
-                    .media-body
-                      h5.media-heading
-                        | #{speaker1.name}
-                        small #{speaker1.company}
-                      div.desc
-                        | #{speaker1.description}
-                      hr(style='margin:8px auto')
-                      if speaker1.links.blog
-                        a.btn.btn-link.btn-github.btn-sm(href=speaker1.links.blog)
-                          i.fa.fa-link
-                      if speaker1.links.github
-                        a.btn.btn-link.btn-link.btn-sm(href=speaker1.links.github)
-                          i.fa.fa-github
-                      if speaker1.links.twitter
-                        a.btn.btn-link.btn-link.btn-sm(href=speaker1.links.twitter)
-                          i.fa.fa-twitter
+                      //- if speaker1.isKeynote
+                      //-   label.label.label-success.label-sm.is-keynote
+                      //-     | Keynote
+  //- script(src='./js/masonry.pkgd.min.js')
+  script(src='https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js')
 
-              if speaker2
-                .col-md-6
-                  .media
-                    .pull-left
-                      if speaker2.isKeynote
-                        label.label.label-success.label-sm.is-keynote
-                          | Keynote
-                      if speaker2.image
-                        img.media-object.dp.img-circle(src='./images/speakers/' + speaker2.image)
-                      else
-                        img.media-object.dp.img-circle(src='./images/jsdc-mascot-150.jpg')
-                    .media-body
-                      h5.media-heading
-                        | #{speaker2.name}
-                        small #{speaker2.company}
-                      div.desc
-                        | #{speaker2.description}
-                      hr(style='margin:8px auto')
-                      if speaker2.links.blog
-                        a.btn.btn-link.btn-github.btn-sm(href=speaker2.links.blog)
-                          i.fa.fa-link
-                      if speaker2.links.github
-                        a.btn.btn-link.btn-link.btn-sm(href=speaker2.links.github)
-                          i.fa.fa-github
-                      if speaker2.links.twitter
-                        a.btn.btn-link.btn-link.btn-sm(href=speaker2.links.twitter)
-                          i.fa.fa-twitter
 
 block js
   script.
     setTimeout(function(){
       document.querySelectorAll('#navbar ul li')[4].classList.add('active');
+
+
+      var elem = document.querySelector('.grid');
+
+      if (window.Masonry) {
+        var msnry = new Masonry(elem, {
+          // options
+          itemSelector: '.grid-item'
+        });
+      }
+
     }, 0);
+
