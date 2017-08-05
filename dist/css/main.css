@@ -1216,9 +1216,7 @@ body.is-loading #header:after {
       text-decoration: none; }
 
 #speaker .grid-item .is-keynote {
-  position: absolute;
-  top: 0;
-  z-index: 10; }
+  position: absolute; }
 
 #speaker .grid-item .img-circle {
   width: 120px;

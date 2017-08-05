@@ -88,6 +88,9 @@ block content
         .grid.row
           each val, index in speakers
             .grid-item.col-md-3
+              if val.isKeynote
+                label.label.label-success.label-sm.is-keynote
+                  | Keynote
               .thumbnail
                 if val.image
                   img.img-circle(src='./images/speakers/' + val.image, width='200')
@@ -108,9 +111,7 @@ block content
                         i.fa.fa-twitter
                   div #{val.description}
 
-                      //- if speaker1.isKeynote
-                      //-   label.label.label-success.label-sm.is-keynote
-                      //-     | Keynote
+
   script(src='./js/masonry.pkgd.min.js')
   //- script(src='https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js')
 
