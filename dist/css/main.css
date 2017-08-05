@@ -1217,6 +1217,8 @@ body.is-loading #header:after {
 
 #speaker .media {
   margin: 10px 5px; }
+  #speaker .media .image-body {
+    margin-right: 10px; }
   #speaker .media .is-keynote {
     position: absolute;
     top: 0;
@@ -1239,7 +1241,8 @@ body.is-loading #header:after {
       margin-left: 10px; }
   #speaker .media .desc {
     font-size: 13px;
-    font-weight: normal; }
+    font-weight: normal;
+    min-height: 130px; }
 
 /* Medium devices (tables, 425px and up) */
 @media (min-width: 425px) {

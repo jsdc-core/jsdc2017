@@ -9,7 +9,7 @@ block content
         description: "章小飛是 Angular 開發團隊的 PM，扮演著傳教士的角色，在 angular.cn 社群與協助企業成功導入。是中國最早一批的Angular 開發者，也是第一位將 Angular 書籍中文化的譯者！從 2016 年起開始加入 Google 團隊至今。",
         description_E: "Aaron is Angular's developer PM in China. He is the lead for angular.cn and social channels in China, and helps developers in China's enterprise and open source communities to be successful with Angular. One of the earliest Angular developers in China since Angular 2012, he translated the first books on Angular into Chinese. Aaron joined the Google team in 2016",
         image: 'aaron.png',
-        company: 'Google',
+        // company: 'Google',
         links: {
           blog: 'http://t.cn/Ro8ZAto'
         },
@@ -20,7 +20,7 @@ block content
         description: 'Yosuke 領導日本 Node.js 社群同時也是 NodeFest 組織的一員，Yosuke 對 ESNext, new protocols like HTTP/2, WebRTC 和測試工具深感興趣。他建立了 tower-of-babel, ES2015 教程工具，現在正進入使用 React 與 Redux 開發 universal 網站應用的世界！',
         description_E: 'Yosuke leads the Japan Node.js User Group and is an organizer of NodeFest. Yosuke has an interest in ESNext, new protocols like HTTP/2, WebRTC, and testing tools. He built the tower-of-babel, ES2015 tutorial tool and is now getting into universal web applications using React and Redux.',
         image: 'y_furukawa.jpg',
-        company: 'recruit technologies',
+        company: 'Recruit Technologies',
         links: {
         },
       },
@@ -84,13 +84,44 @@ block content
         h2(style="text-align:center;") TBD
       else
         .container
-          each val, index in loops
-            -
-              var speaker1 = speakers[val];
-              var speaker2 = speakers[val+1];
+            // -
+            //   var speaker1 = speakers[val];
+            //   var speaker2 = speakers[val+1];
 
             .row
-              if speaker1
+              each speaker, index in speakers
+                .col-md-6
+                  .media
+                    .image-body.pull-left
+                      if speaker.isKeynote
+                        label.label.label-success.label-sm.is-keynote
+                          | Keynote
+                      if speaker.image
+                        img.media-object.dp.img-circle(src='./images/speakers/' + speaker.image)
+                      else
+                        img.media-object.dp.img-circle(src='./images/jsdc-mascot-150.jpg')
+                    .media-body
+                      h5.media-heading
+                        | #{speaker.name}
+                        small #{speaker.company}
+                      div.desc
+                        | #{speaker.description}
+                      hr(style='margin:8px auto')
+                      - var links = speaker.links;
+                      if (Object.keys(links).length === 0)
+                        a.btn.btn-link.btn-github.btn-sm(href="javascript:void(0);")
+                          i.fa.fa-ellipsis-h
+                      if speaker.links.blog
+                        a.btn.btn-link.btn-github.btn-sm(href=speaker.links.blog)
+                          i.fa.fa-link
+                      if speaker.links.github
+                        a.btn.btn-link.btn-link.btn-sm(href=speaker.links.github)
+                          i.fa.fa-github
+                      if speaker.links.twitter
+                        a.btn.btn-link.btn-link.btn-sm(href=speaker.links.twitter)
+                          i.fa.fa-twitter
+
+              //- if speaker1
                 .col-md-6
                   .media
                     .pull-left
@@ -118,7 +149,7 @@ block content
                         a.btn.btn-link.btn-link.btn-sm(href=speaker1.links.twitter)
                           i.fa.fa-twitter
 
-              if speaker2
+              //- if speaker2
                 .col-md-6
                   .media
                     .pull-left

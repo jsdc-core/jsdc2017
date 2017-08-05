@@ -1,7 +1,9 @@
 #speaker {
-    .media
-    {
+    .media {
         margin: 10px 5px;
+        .image-body {
+            margin-right: 10px;
+        }
         .is-keynote {
             position: absolute;
             top: 0;
@@ -34,6 +36,7 @@
         .desc {
             font-size: 13px;
             font-weight: normal;
+            min-height: 130px;
         }
     }
 }
