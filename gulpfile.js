@@ -41,7 +41,7 @@ gulp.task('script', function() {
 
 // 壓縮 images 檔案大小
 gulp.task('imagemin', function() {
-  return gulp.src('./source/images/*/**')
+  return gulp.src('./source/images/**/*')
     .pipe(plugins.plumber())
     .pipe(plugins.imagemin([
       plugins.imagemin.jpegtran({progressive: true}),
