@@ -62,4 +62,23 @@
 
     });
 
+    setInterval(function(){
+      var specifyDay = new Date('2017/11/04 08:30:00').getTime();
+      var now = new Date().getTime();
+      var diff = new Date(specifyDay - now).getTime();
+      var util = {
+        second: 1000,
+        minute: 1000*60,
+        hour: 1000*60*60,
+        date: 1000*60*60*24,
+      }
+      // var year = diff.getFullYear();
+      // var month = diff.getMonth() + 1;
+      var date = Math.floor(diff / util.date);
+      var hour = Math.floor((diff - (date * util.date)) / util.hour);
+      var minute = Math.floor((diff - ((date * util.date) + (hour * util.hour))) / util.minute);
+      var second = Math.floor((diff - ((date * util.date) + (hour * util.hour) + (minute * util.minute))) / util.second);
+      $('.final-countdown').text('倒數' + date + '天 ' + hour + ':' + minute + ':' + (second < 10? '0' + second:second));
+    }, 1000);
+
 })(jQuery);
