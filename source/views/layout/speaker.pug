@@ -66,6 +66,16 @@ block content
         }
       },
       {
+        name: 'Simon Sun',
+        isKeynote: false,
+        description: '程式中一個迷途小書僮。',
+        image: 'simonsun.jpg',
+        // company: '',
+        links: {
+          medium: 'https://medium.com/@simonsun1988'
+        }
+      },
+      {
         name: '彭彭',
         isKeynote: false,
         description: '喜歡技術、更熱愛與人互動。若技術不能轉換成大家都能上手把玩的東西，那有什麼意思呢？耕耘網頁領域超過十五年，全力挖掘 Web 的潛力，特別是JavaScript實作重量級應用的可能性和營利模式。Piconion 主要開發者，擔任前端工程講師超過十年，曾任 COSCUP、Modern Web 講者。',
@@ -119,6 +129,9 @@ block content
                     if val.links.twitter
                       a.btn.btn-link.btn-link.btn-sm(href=val.links.twitter)
                         i.fa.fa-twitter
+                    if val.links.medium
+                      a.btn.btn-link.btn-link.btn-sm(href=val.links.medium)
+                        i.fa.fa-medium
                   div #{val.description}
 
 block js
