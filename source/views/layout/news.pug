@@ -10,9 +10,8 @@ block content
         .news-container
           span 讀取資料中…
 
-  script(src='./js/blogCrawler.min.js')
-
 block js
+  script(src='./js/news.min.js')
   script.
     setTimeout(function(){
       document.querySelectorAll('#navbar ul li')[2].classList.add('active');
