@@ -34,7 +34,7 @@ gulp.task('pug', function() {
 gulp.task('script', function() {
   return gulp.src('./source/js/*.js')
     .pipe(plugins.plumber())
-    // .pipe(plugins.uglify())
+    .pipe(plugins.uglify())
     .pipe(plugins.rename({suffix: '.min'}))
     .pipe(gulp.dest('./dist/js'));
 });
@@ -64,7 +64,7 @@ gulp.task('copyFontAwesome', function(){
 
 // 清掉 dist 裡面 css 跟 js 的資料夾
 gulp.task('clean', function() {
-  return del(['./dist/css/*.css', './dist/css/*.map', './dist/js/*.js', '/dist/images/*']);
+  return del(['./dist/css/*.css', './dist/css/*.css.map', './dist/js/*', '/dist/images/*']);
 });
 
 gulp.task('browser-sync', ['build'], function() {
