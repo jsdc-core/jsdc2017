@@ -4,8 +4,8 @@
   //- company: 公司/組織
   //- 額外連結們: github, twitter, link, linkedin
 
-  var speakers = [
-    {
+  var speakers = {
+    Aaron: {
       name: '章小飛',
       isKeynote: true,
       description: "章小飛是 Angular 開發團隊的 PM，扮演著傳教士的角色，在 angular.cn 社群與協助企業成功導入。是中國最早一批的Angular 開發者，也是第一位將 Angular 書籍中文化的譯者！",
@@ -16,7 +16,7 @@
         blog: 'http://t.cn/Ro8ZAto'
       },
     },
-    {
+    Yosuke: {
       name: 'yosuke-furukawa',
       isKeynote: true,
       description: 'Yosuke 領導日本 Node.js 社群同時也是 NodeFest 組織的一員，Yosuke 對 ESNext, new protocols like HTTP/2, WebRTC 和測試工具深感興趣。建立了 tower-of-babel, ES2015 教學工具，目前正進入用 React 與 Redux 開發 universal 的網站應用！',
@@ -26,7 +26,7 @@
       links: {
       },
     },
-    {
+    Atian: {
       name: '天豬',
       isKeynote: true,
       description: '阿里前端負責人，EggJS 核心開發者。',
@@ -36,7 +36,7 @@
         github: 'https://github.com/atian25'
       },
     },
-    {
+    Folio: {
       name: 'Folio',
       isKeynote: false,
       description: '元配是 JavaScript、真愛是 Rust、小三是 Vim、前任是 PHP、在追求 Erlang、跟 Python 曖昧、天菜是 Front-End Engineering。',
@@ -46,7 +46,7 @@
         github: 'https://github.com/sharils'
       }
     },
-    {
+    Kuro: {
       name: 'Kuro Hsu',
       isKeynote: false,
       description: '前端工程師，長期專注網頁前端標準技術。曾任 JSDC、WebConf、COSCUP 等研討會講者，也多次參與前端技術社群分享心得。',
@@ -55,7 +55,7 @@
         github: 'https://kuro.tw/'
       }
     },
-    {
+    Michael: {
       name: 'Michael Cheng',
       isKeynote: false,
       description: 'Michael 是一位 Google 軟體工程師，擅長使用 Angular 與 TypeScript 進行網站開發。工作之外的他，對網站技術、鋼琴、音樂充滿熱情。',
@@ -67,7 +67,7 @@
         github: 'https://github.com/mlcheng'
       }
     },
-    // {
+    //Pahud: {
     //   name: 'Pahud',
     //   isKeynote: false,
     //   description: 'Pahud Hsieh（謝洪恩）目前是AWS Solutions Architect，擅長 serverless 與 container 架構設計與開發，在加入AWS之前曾在新創公司帶領團隊 all-in 投入 AWS 開發基於全球的 IoT 架構設計，Pahud目前活躍於 AWS 用戶社區，並且經常往來香港與台灣之間參與各種大型活動與工作坊。',
@@ -77,7 +77,7 @@
     //     twitter: 'https://twitter.com/pahudnet'
     //   }
     // },
-    {
+    SimonSun: {
       name: 'Simon Sun',
       isKeynote: false,
       description: '程式中一個迷途小書僮。',
@@ -87,7 +87,7 @@
         medium: 'https://medium.com/@simonsun1988'
       }
     },
-    {
+    PonPon: {
       name: '彭彭',
       isKeynote: false,
       description: '喜歡技術、更熱愛與人互動。若技術不能轉換成大家都能上手把玩的東西，那有什麼意思呢？耕耘網頁領域超過十五年，全力挖掘 Web 的潛力，特別是JavaScript實作重量級應用的可能性和營利模式。Piconion 主要開發者，擔任前端工程講師超過十年，曾任 COSCUP、Modern Web 講者。',
@@ -97,7 +97,7 @@
         blog: 'http://training.pada-x.com/'
       }
     },
-    {
+    Kevin: {
       name: '小莊',
       isKeynote: false,
       description: '本職是兩個孩子的爸爸，目前在數位廣告研發團隊的工程師。一直對台灣的資訊產業寄予厚望，戮力於提升台灣資訊界的就業環境。',
@@ -107,7 +107,7 @@
         blog: 'http://www.kvzhuang.net/'
       }
     },
-    {
+    Jerry: {
       name: '洪名辰',
       isKeynote: false,
       description: '在 Appier 擔任 前端工程師，熱愛研究各種網頁技術。',
@@ -116,7 +116,7 @@
       links: {
       }
     },
-    {
+    Yuren: {
       name: 'Yuren Ju (小朱)',
       isKeynote: false,
       description: '旅行、咖啡、科技宅。喜歡吸收新知跟挽起袖子動手做與跟別人分享這些經驗。也是台灣開放源碼社群的長工，曾經擔任 COSCUP 的紀錄組長以及議程組長。',
@@ -126,7 +126,7 @@
         github: 'https://github.com/yurenju'
       }
     },
-    {
+    Tony: {
       name: 'Tony Pai',
       isKeynote: false,
       description: '如同追逐白兔掉進兔子洞的愛麗絲般，是個喜歡追逐技術掉進坑的開發者。',
@@ -136,7 +136,7 @@
         github: 'https://github.com/tpai'
       }
     },
-    {
+    Jhen: {
       name: 'Jhen',
       isKeynote: false,
       description: '休學中，目前剛成為 MyBigDay 的 Lead engineer，使用 React / React Native / Node.js 開發服務，目前著迷於 GraphQL。同時也是 redux-devtools-extension 的核心貢獻者之一。',
@@ -147,7 +147,7 @@
         twitter: 'https://twitter.com/jhen_jie'
       }
     },
-    {
+    SimonSu: {
       name: 'Simon Su',
       isKeynote: false,
       description: '現任GCPUG.TW Co-organizer, 也是台灣地區Google Cloud Trainer, 並得到Cloud GDE之榮耀',
@@ -157,7 +157,7 @@
         blog: 'http://about.me/peihsinsu'
       }
     },
-    {
+    WM: {
       name: 'WM',
       isKeynote: false,
       description: '待在電商產業的前端工程師，常出沒於 MozTW 與 f2eTW 以及 React 社群',
@@ -167,7 +167,7 @@
         blog: 'https://kidwm.net'
       }
     },
-    {
+    Ben: {
       name: 'Ben Jian',
       isKeynote: false,
       description: '在軟體開發的世界裡，我喜愛它帶給我不停前進的學習動力，選擇它是我一生最正確的決定。現為全端工程師。',
@@ -178,7 +178,7 @@
         medium: 'https://medium.com/@benzwjian'
       }
     },
-    {
+    Rplus: {
       name: 'Rplus Chen',
       isKeynote: false,
       description: '♻ 習慣用分享文章來做筆記的前端開發者。f2etw 的龍套君。近來喜歡辦小活動揪團出門寫 ♥ CSS ♥',
@@ -188,7 +188,7 @@
         twitter: 'https://twitter.com/RplusTW'
       }
     },
-    {
+    AarOn: {
       name: 'AarOn',
       isKeynote: false,
       company: 'Taroko Software',
@@ -198,7 +198,7 @@
         blog: 'https://codepen.io/aaronchuo/',
       }
     },
-    {
+    Will: {
       name: 'Will 保哥',
       isKeynote: false,
       company: '多奇數位創意有限公司',
@@ -209,7 +209,7 @@
         twitter: 'https://twitter.com/Will_Huang'
       }
     },
-    {
+    Anna: {
       name: 'Anna Su',
       isKeynote: false,
       company: 'PIXNET',
@@ -220,7 +220,7 @@
         twitter: 'https://twitter.com/newstory0113'
       }
     },
-    {
+    Sherlock: {
       name: 'Sherlock Kuo',
       isKeynote: false,
       company: 'GoAnimate',
@@ -229,7 +229,7 @@
       links: {
       }
     },
-    {
+    Zet: {
       name: 'Zet',
       isKeynote: false,
       company: '國立中央大學',
@@ -239,7 +239,7 @@
         github: 'https://github.com/tz5514/',
       }
     },
-    {
+    CT: {
       name: 'CT',
       isKeynote: false,
       company: 'Appier',
@@ -251,7 +251,7 @@
         twitter: 'https://twitter.com/wu_ct'
       }
     },
-    {
+    Sean: {
       name: 'Sean',
       isKeynote: false,
       company: '悠邁股份有限公司 & 優愛德（urAD）& Deus',
@@ -261,7 +261,7 @@
         github: 'https://github.com/tz5514/',
       }
     },
-    {
+    wwwy3y3: {
       name: 'wwwy3y3',
       isKeynote: false,
       company: 'Canner.io 易開科技',
@@ -271,7 +271,7 @@
         github: 'https://github.com/wwwy3y3/',
       }
     },
-    {
+    Fred: {
       name: 'Fred Chien',
       isKeynote: false,
       // company: '',
@@ -281,5 +281,4 @@
         blog: 'http://fred-zone.blogspot.tw/'
       }
     },
-  ];
-
+  };
