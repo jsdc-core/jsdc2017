@@ -119,8 +119,8 @@ block content
                 each content, contentIndex in agendaContents
                   ul.timeline
                     if (content.speaker)
-                      - var level = speakers[content.speaker].agenda.level;
-                      span.event-level(data-level=level[level] class=level)
+                      - var tempLevel = speakers[content.speaker].agenda.level;
+                      span.event-level(data-level=level[tempLevel] class=tempLevel)
 
                     li.event(data-date=content.time)
                       if (content.name)
