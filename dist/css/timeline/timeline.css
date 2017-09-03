@@ -23,12 +23,35 @@
   #agenda .date input[value='day-2']:checked ~ .day-1 {
     display: none; }
 
+#agenda .rooms {
+  margin: 0 auto;
+  max-width: 75%;
+  text-align: left; }
+  #agenda .rooms > .col-md-6 {
+    padding-left: 40px; }
+    #agenda .rooms > .col-md-6:last-of-type {
+      padding-left: 0; }
+
+#agenda .room {
+  display: none;
+  position: absolute;
+  min-width: 50px;
+  text-align: center;
+  border-radius: 5px;
+  color: white; }
+  #agenda .room.room-101 {
+    background-color: #f29c67; }
+  #agenda .room.room-201 {
+    background-color: #ff4242; }
+  #agenda .room:before {
+    content: attr(data-room); }
+
 #agenda .navbar-mobile {
   position: fixed;
   right: 2px;
   bottom: 10px;
   display: none; }
-  #agenda .navbar-mobile .room-101, #agenda .navbar-mobile .room-201, #agenda .navbar-mobile .back-top {
+  #agenda .navbar-mobile .back-top {
     text-decoration: none;
     display: block;
     width: 40px;
@@ -37,21 +60,14 @@
     line-height: 40px;
     border-radius: 50%;
     color: white; }
-  #agenda .navbar-mobile .room-101, #agenda .navbar-mobile .room-201 {
-    margin-bottom: 10px;
-    font-weight: bold; }
-  #agenda .navbar-mobile .room-101 {
-    background-color: #f29c67; }
-  #agenda .navbar-mobile .room-201 {
-    background-color: #ff4242; }
   #agenda .navbar-mobile .back-top {
     background-color: #bbb; }
 
 #agenda .event-level {
   font-size: 16px;
   position: absolute;
-  left: -120px;
-  top: 10px;
+  left: 13px;
+  top: 33px;
   padding: 0 10px; }
   #agenda .event-level.beginner, #agenda .event-level.intermediate, #agenda .event-level.advanced {
     border-radius: 5px; }
@@ -72,7 +88,7 @@
   background: rgba(255, 255, 255, 0.03);
   color: #333;
   font-family: 'Source Sans Pro', sans-serif;
-  margin: 50px auto;
+  margin: 0 auto 50px auto;
   letter-spacing: 0.5px;
   position: relative;
   line-height: 1.4em;
@@ -81,7 +97,7 @@
   list-style: none;
   text-align: left;
   font-weight: 1;
-  max-width: 50%; }
+  max-width: 75%; }
   #agenda .timeline h1 {
     font-family: 'Oswald', sans-serif;
     letter-spacing: 1.5px;
@@ -96,8 +112,7 @@
     font-family: 'Oswald', sans-serif;
     letter-spacing: 1.5px;
     font-weight: 100;
-    font-size: 1.4em;
-    border-bottom: 2px dashed #2c9ab8; }
+    font-size: 1.4em; }
   #agenda .timeline p {
     word-wrap: break-word; }
   #agenda .timeline .event {
@@ -146,40 +161,53 @@
     #agenda .date .day-1 h2, #agenda .date .day-2 h2 {
       margin-top: 20px;
       margin-bottom: -30px; }
+  #agenda .rooms {
+    display: none; }
+  #agenda .room {
+    display: block;
+    top: -20px;
+    left: -10px; }
   #agenda .navbar-mobile {
     display: block; }
-  #agenda .timeline h3 {
-    min-width: 95px;
-    min-height: 75px;
-    margin-left: -25px;
-    margin-top: -20px;
-    border-bottom: none; }
-  #agenda .timeline p {
-    margin-left: -25px; }
-  #agenda .timeline .event:before {
-    left: -30.5px;
-    top: 65px;
-    background-color: #2c9ab8;
-    color: white;
-    margin-top: 8px;
-    padding: 2px 8px 2px 8px;
-    content: attr(data-date);
-    text-align: right;
-    font-weight: 400;
-    font-size: 0.9em;
-    min-width: 130px;
-    border-radius: 0 5px 5px 0; }
-  #agenda .timeline .event p {
-    top: 27px;
-    padding: 10px 0px 10px 0px;
-    position: relative;
-    width: 10rem; }
-  #agenda .timeline .event-level {
-    position: absolute;
-    min-width: 50px;
-    text-align: center;
-    top: 0;
-    left: 5px;
-    padding: 0; } }
+  #agenda .timeline {
+    margin: 50px auto; }
+    #agenda .timeline h3 {
+      min-width: 95px;
+      margin-left: -25px;
+      margin-top: 25px;
+      border-bottom: none; }
+    #agenda .timeline p {
+      margin-left: -25px; }
+    #agenda .timeline .event:before {
+      left: -31.5px;
+      top: -11px;
+      background-color: #2c9ab8;
+      color: white;
+      margin-top: 8px;
+      padding: 2px 8px 2px 8px;
+      content: attr(data-date);
+      text-align: right;
+      font-weight: 400;
+      font-size: 0.9em;
+      min-width: 130px;
+      border-radius: 0 5px 5px 0; }
+    #agenda .timeline .event .col-md-6:first-of-type {
+      border-bottom: 1px solid rgba(44, 154, 184, 0.3);
+      margin-top: 65px; }
+    #agenda .timeline .event .col-md-6 h3 {
+      margin-top: 45px;
+      margin-bottom: 0; }
+    #agenda .timeline .event p {
+      top: 27px;
+      padding: 10px 0px 10px 0px;
+      position: relative;
+      width: 10rem; }
+    #agenda .timeline .event-level {
+      position: absolute;
+      min-width: 50px;
+      text-align: center;
+      top: -20px;
+      left: 45px;
+      padding: 0; } }
 
 /*# sourceMappingURL=timeline.css.map */
