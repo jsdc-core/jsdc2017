@@ -117,10 +117,12 @@
     font-size: 16px;
     padding: 0 10px;
 
-    &.beginner, &.intermediate, &.advanced {
+    &.none, &.beginner, &.intermediate, &.advanced {
       border-radius: 5px;
     }
-
+    &.none {
+      background-color: #dddddd;
+    }
     &.beginner {
       background-color: #dff0d8;
     }
@@ -301,7 +303,6 @@
           margin-right: 2px;
         }
       }
-
     }
   }
 }

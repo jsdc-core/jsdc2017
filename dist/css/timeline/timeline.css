@@ -70,8 +70,10 @@
 #agenda .event-level {
   font-size: 16px;
   padding: 0 10px; }
-  #agenda .event-level.beginner, #agenda .event-level.intermediate, #agenda .event-level.advanced {
+  #agenda .event-level.none, #agenda .event-level.beginner, #agenda .event-level.intermediate, #agenda .event-level.advanced {
     border-radius: 5px; }
+  #agenda .event-level.none {
+    background-color: #dddddd; }
   #agenda .event-level.beginner {
     background-color: #dff0d8; }
   #agenda .event-level.intermediate {
