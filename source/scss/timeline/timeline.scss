@@ -109,12 +109,12 @@
       background-color: #bbb;
     }
   }
+  .tag-groups {
+    position: absolute;
+    top: 35px;
+  }
   .event-level {
     font-size: 16px;
-    position: absolute;
-    left: 13px;
-    top: 33px;
-
     padding: 0 10px;
 
     &.beginner, &.intermediate, &.advanced {
@@ -293,11 +293,12 @@
       }
       .tag-groups {
         position: absolute;
-        top: 35px;
+        top: -20px;
+        left: 50px;
         .event-level {
           min-width: 50px;
           text-align: center;
-          padding: 0;
+          margin-right: 2px;
         }
       }
 

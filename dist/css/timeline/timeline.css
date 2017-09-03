@@ -63,11 +63,12 @@
   #agenda .navbar-mobile .back-top {
     background-color: #bbb; }
 
+#agenda .tag-groups {
+  position: absolute;
+  top: 35px; }
+
 #agenda .event-level {
   font-size: 16px;
-  position: absolute;
-  left: 13px;
-  top: 33px;
   padding: 0 10px; }
   #agenda .event-level.beginner, #agenda .event-level.intermediate, #agenda .event-level.advanced {
     border-radius: 5px; }
@@ -204,10 +205,11 @@
       width: 10rem; }
     #agenda .timeline .tag-groups {
       position: absolute;
-      top: 35px; }
+      top: -20px;
+      left: 50px; }
       #agenda .timeline .tag-groups .event-level {
         min-width: 50px;
         text-align: center;
-        padding: 0; } }
+        margin-right: 2px; } }
 
 /*# sourceMappingURL=timeline.css.map */
