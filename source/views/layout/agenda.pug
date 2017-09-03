@@ -1,101 +1,8 @@
 extends ../partials/_layout
 
 block content
-  //- beginner: 初級 、 intermediate: 中級 、 advanced: 高級
-
-  -
-    var level = {
-      beginner: '初階',
-      intermediate: '中階',
-      advanced: '高階'
-    }
-    var agenda = {
-      '11/04(六)': {
-        '101': [
-          {time: '08:30 ~ 09:00', name: '會眾報到', speaker: '' },
-          {time: '09:00 ~ 09:10', name: '大會開場', speaker: '' },
-          {time: '09:10 ~ 10:00', name: '', speaker: 'Yosuke' },
-          {time: '10:00 ~ 10:30', name: '上午茶', speaker: '' },
-          {time: '10:30 ~ 11:10', name: '', speaker: 'Kevin' },
-          {time: '11:10 ~ 11:30', name: '休息', speaker: '' },
-          {time: '11:30 ~ 12:10', name: '', speaker: 'Tony' },
-          {time: '12:10 ~ 13:10', name: '午餐', speaker: '' },
-          {time: '13:10 ~ 14:00', name: '', speaker: 'Sean' },
-          {time: '14:00 ~ 14:15', name: '休息', speaker: '' },
-          {time: '14:15 ~ 14:55', name: '', speaker: 'SeanLiu' },
-          {time: '14:55 ~ 15:10', name: '休息', speaker: '' },
-          {time: '15:10 ~ 15:50', name: '', speaker: 'Michael' },
-          {time: '15:50 ~ 16:30', name: '下午茶', speaker: '' },
-          {time: '16:30 ~ 17:10', name: '', speaker: 'wwwy3y3' },
-          {time: '17:10 ~ 17:25', name: '休息', speaker: '' },
-          {time: '17:25 ~ 18:10', name: '', speaker: 'Jhen' },
-          {time: '18:10 ~ 19:00', name: '散場', speaker: '' },
-        ],
-        '201': [
-          {time: '08:30 ~ 09:00', name: '會眾報到', speaker: '' },
-          {time: '09:00 ~ 09:10', name: '大會開場', speaker: '' },
-          {time: '09:10 ~ 10:00', name: '', speaker: 'Will' },
-          {time: '10:00 ~ 10:30', name: '上午茶', speaker: '' },
-          {time: '10:30 ~ 11:10', name: '', speaker: 'Jerry' },
-          {time: '11:10 ~ 11:30', name: '休息', speaker: '' },
-          {time: '11:30 ~ 12:10', name: '', speaker: 'Yuren' },
-          {time: '12:10 ~ 13:10', name: '午餐', speaker: '' },
-          {time: '13:10 ~ 14:00', name: '', speaker: 'Zet' },
-          {time: '14:00 ~ 14:15', name: '休息', speaker: '' },
-          {time: '14:15 ~ 14:55', name: '', speaker: 'WM' },
-          {time: '14:55 ~ 15:10', name: '休息', speaker: '' },
-          {time: '15:10 ~ 15:50', name: '', speaker: 'Anna' },
-          {time: '15:50 ~ 16:30', name: '下午茶', speaker: '' },
-          {time: '16:30 ~ 17:10', name: '', speaker: 'SimonSu' },
-          {time: '17:10 ~ 17:25', name: '休息', speaker: '' },
-          {time: '17:25 ~ 18:10', name: '', speaker: '' },
-          {time: '18:10 ~ 19:00', name: '散場', speaker: '' },
-        ]
-      },
-      '11/05(日)': {
-        '101': [
-          {time: '08:30 ~ 08:50', name: '會眾進場', speaker: '' },
-          {time: '08:50 ~ 09:00', name: '大會開場', speaker: '' },
-          {time: '09:00 ~ 09:50', name: '', speaker: 'Atian' },
-          {time: '09:50 ~ 10:20', name: '上午茶', speaker: '' },
-          {time: '10:20 ~ 11:00', name: '', speaker: 'Rplus' },
-          {time: '11:00 ~ 11:20', name: '休息', speaker: '' },
-          {time: '11:20 ~ 12:00', name: '', speaker: 'Folio' },
-          {time: '12:00 ~ 13:00', name: '午餐', speaker: '' },
-          {time: '13:00 ~ 13:50', name: '', speaker: 'Aaron' },
-          {time: '13:50 ~ 14:05', name: '休息', speaker: '' },
-          {time: '14:05 ~ 14:45', name: '', speaker: 'AarOn' },
-          {time: '14:45 ~ 15:25', name: '下午茶', speaker: '' },
-          {time: '15:25 ~ 16:05', name: '', speaker: 'Kuro' },
-          {time: '16:05 ~ 16:20', name: '休息', speaker: '' },
-          {time: '16:20 ~ 17:00', name: 'Lighting Talk', speaker: '' },
-          {time: '17:00 ~ 17:30', name: '散場', speaker: '' },
-        ],
-        '201': [
-          {time: '08:30 ~ 08:50', name: '會眾進場', speaker: '' },
-          {time: '08:50 ~ 09:00', name: '大會開場', speaker: '' },
-          {time: '09:00 ~ 09:50', name: '', speaker: 'Ben' },
-          {time: '09:50 ~ 10:20', name: '上午茶', speaker: '' },
-          {time: '10:20 ~ 11:00', name: '', speaker: 'Sherlock' },
-          {time: '11:00 ~ 11:20', name: '休息', speaker: '' },
-          {time: '11:20 ~ 12:00', name: '', speaker: 'PonPon' },
-          {time: '12:00 ~ 13:00', name: '午餐', speaker: '' },
-          {time: '13:00 ~ 13:50', name: '', speaker: 'CT' },
-          {time: '13:50 ~ 14:05', name: '休息', speaker: '' },
-          {time: '14:05 ~ 14:45', name: '', speaker: 'SimonSun' },
-          {time: '14:45 ~ 15:25', name: '下午茶', speaker: '' },
-          {time: '15:25 ~ 16:05', name: '', speaker: 'Fred' },
-          {time: '16:05 ~ 16:20', name: '休息', speaker: '' },
-          {time: '16:20 ~ 17:00', name: 'Lighting Talk', speaker: '' },
-          {time: '17:00 ~ 17:30', name: '散場', speaker: '' },
-        ]
-      }
-    };
-
   section#agenda
     nav.navbar-mobile
-      a.room-101(href='#101') 101
-      a.room-201(href='#201') 201
       a.back-top(href='#agenda')
         i.fa.fa-arrow-up
     .container
@@ -110,29 +17,42 @@ block content
               input(type='radio' name='agenda-toggle' id=('day-'+day) value=('day-'+day))
             label(for='day-'+day) #{index}
 
+          .row.rooms
+            .col-md-6
+              h2 101
+            .col-md-6
+              h2 201
+
           - day = 0;
           each rooms, index in agenda
             - day = day + 1;
-            each agendaContents, agendaIndex in rooms
-              .col-sm-6(class=('day-'+day))
-                h2(id=agendaIndex) #{agendaIndex}
-                each content, contentIndex in agendaContents
-                  ul.timeline
-                    if (content.speaker)
-                      - var tempLevel = speakers[content.speaker].agenda.level;
-                      span.event-level(data-level=level[tempLevel] class=tempLevel)
-
-                    li.event(data-date=content.time)
-                      if (content.name)
-                        h3 #{content.name}
-                      else if (content.speaker)
-                        h3 #{speakers[content.speaker].name}
-                        h4
-                          | #{speakers[content.speaker].agenda.title}
+            ul.timeline(class=('day-'+day))
+              each agendaContents, agendaIndex in rooms
+                li.event(data-date=agendaContents.time)
+                  .row
+                    each content, index in agendaContents.list
+                      if (index === 'all')
+                        .col-md-12
+                          if (content.name)
+                            h3 #{content.name}
                       else
-                        h3(style="border-bottom:none;") TDB
-                        p
-                          | ---
+                        .col-md-6
+                          span.room(data-room=(index) class='room-'+index)
+
+                          if (content.speaker)
+                            - var tempLevel = speakers[content.speaker].agenda.level;
+                            span.event-level(data-level=agendaLevel[tempLevel] class=tempLevel)
+
+                          if (content.name)
+                            h3 #{content.name}
+                          else if (content.speaker)
+                            h3 #{speakers[content.speaker].name}
+                            h4
+                              | #{speakers[content.speaker].agenda.title}
+                          else
+                            h3(style="border-bottom:none;") TDB
+                            p
+                              | ---
 
 
 block css
