@@ -40,15 +40,18 @@ block content
                           span.room(data-room=(index) class='room-'+index)
 
                           if (content.speaker)
-                            - var tempLevel = speakers[content.speaker].agenda.level;
-                            span.event-level(data-level=agendaLevel[tempLevel] class=tempLevel)
+                            - var info = speakers[content.speaker];
+                            .tag-groups
+                              each value, index in info.agenda.levels
+                                span.event-level(data-level=agendaLevel[value] class=value)
+                            //- if (info.agenda.lang == 'EN')
+                              span.event-level(data-level='EN' class='EN')
 
-                          if (content.name)
-                            h3 #{content.name}
-                          else if (content.speaker)
-                            h3 #{speakers[content.speaker].name}
+                            h3 #{info.name}
                             h4
-                              | #{speakers[content.speaker].agenda.title}
+                              | #{info.agenda.title}
+                          else if (content.name)
+                            h3 #{content.name}
                           else
                             h3(style="border-bottom:none;") TDB
                             p

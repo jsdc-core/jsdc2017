@@ -202,12 +202,12 @@
       padding: 10px 0px 10px 0px;
       position: relative;
       width: 10rem; }
-    #agenda .timeline .event-level {
+    #agenda .timeline .tag-groups {
       position: absolute;
+      top: 35px; }
+    #agenda .timeline .event-level {
       min-width: 50px;
       text-align: center;
-      top: -20px;
-      left: 45px;
       padding: 0; } }
 
 /*# sourceMappingURL=timeline.css.map */
