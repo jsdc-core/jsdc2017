@@ -205,9 +205,9 @@
     #agenda .timeline .tag-groups {
       position: absolute;
       top: 35px; }
-    #agenda .timeline .event-level {
-      min-width: 50px;
-      text-align: center;
-      padding: 0; } }
+      #agenda .timeline .tag-groups .event-level {
+        min-width: 50px;
+        text-align: center;
+        padding: 0; } }
 
 /*# sourceMappingURL=timeline.css.map */
