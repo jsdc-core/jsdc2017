@@ -647,6 +647,7 @@ body {
 /* Start form small devices */
 #navbar {
   background-color: rgba(103, 103, 103, 0.6);
+  border-radius: 0;
   border-bottom: none;
   margin: 0;
   position: fixed;
@@ -1060,8 +1061,7 @@ body.is-loading #header:after {
 
 #jobs {
   position: relative;
-  padding: 75px 10%;
-  text-align: center; }
+  padding: 75px 10%; }
 
 #footer .copyright {
   font-size: 0.8em;

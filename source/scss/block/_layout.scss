@@ -23,6 +23,7 @@ body{
 
 #navbar {
   background-color: rgba(103, 103, 103, 0.6);
+  border-radius: 0;
   border-bottom: none;
   margin: 0;
   position: fixed;
@@ -602,5 +603,4 @@ body.is-loading {
 #jobs {
   position: relative;
   padding: 75px 10% ;
-  text-align: center;
 }
