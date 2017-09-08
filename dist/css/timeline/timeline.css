@@ -7,17 +7,27 @@
     color: white;
     font-weight: bold;
     width: 50%;
-    background-color: #2c9ab8;
+    background-color: rgba(44, 154, 184, 0.7);
     border-radius: 5px 0 0 5px; }
+    #agenda .date > label:hover {
+      background-color: #2c9ab8; }
     #agenda .date > label:last-of-type {
-      background-color: #b8cb5e;
+      background-color: rgba(184, 203, 94, 0.7);
       border-radius: 0 5px 5px 0; }
+      #agenda .date > label:last-of-type:hover {
+        background-color: #b8cb5e; }
     #agenda .date > label:before {
       display: none; }
+  #agenda .date input[value='day-1']:checked + label {
+    background-color: #2c9ab8;
+    text-decoration: underline; }
   #agenda .date input[value='day-1']:checked ~ .day-1 {
     display: block; }
   #agenda .date input[value='day-1']:checked ~ .day-2 {
     display: none; }
+  #agenda .date input[value='day-2']:checked + label {
+    background-color: #b8cb5e;
+    text-decoration: underline; }
   #agenda .date input[value='day-2']:checked ~ .day-2 {
     display: block; }
   #agenda .date input[value='day-2']:checked ~ .day-1 {
