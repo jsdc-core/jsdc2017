@@ -588,6 +588,10 @@ body.is-loading {
     .agenda-outline {
       max-height: 100px;
       overflow-y: auto;
+      border: 1px dashed gray;
+    }
+    .swal2-close {
+      width: auto;
     }
   }
 }

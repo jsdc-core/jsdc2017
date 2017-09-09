@@ -42,6 +42,7 @@ block content
                           if (content.speaker)
                             - var info = speakers[content.speaker];
                             .tag-groups
+                              span.event-lang #{languages[info.agenda.lang]}
                               each value in info.agenda.levels
                                 span.event-level(data-level=agendaLevel[value] class=value)
 
@@ -55,7 +56,6 @@ block content
                             h4
                               | ---
 
-  script(src='./js/agenda.min.js')
   script.
     var agendaData = !{JSON.stringify(agenda)};
     var speakerData = !{JSON.stringify(speakers)};
@@ -66,6 +66,7 @@ block css
 
 block js
   script(src='./js/sweetalert2.min.js')
+  script(src='./js/agenda.min.js')
   script(src='https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js')
   script.
     setTimeout(function(){

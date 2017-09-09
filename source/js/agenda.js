@@ -3,7 +3,9 @@
     var currentAgendaContent = agendaData[date][time]['list'][room];
     var swalOptions = {
       imageWidth: 100,
-      confirmButtonText: '關閉'
+      showCloseButton: true,
+      showConfirmButton: false
+      // confirmButtonText: '關閉'
     }
 
     if (currentAgendaContent.speaker) {
@@ -15,6 +17,8 @@
       swalOptions.html = '<h4>'+currntAgendaData.title+'</h4>';
       if (currntAgendaData.outline)
         swalOptions.html += '<div class="agenda-outline">' + currntAgendaData.outline + '<div>';
+      else
+        swalOptions.html += '<div class="agenda-outline">---<div>';
     } else {
       swalOptions.title = '我是犀牛啦！';
       swalOptions.imageUrl = './images/jsdc-mascot-150.jpg';
