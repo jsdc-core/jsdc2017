@@ -13,12 +13,13 @@ var plugins = require('gulp-load-plugins')({
 gulp.task('scss', function() {
   return gulp.src(['./source/scss/**/*.scss', './source/scss/**/*.css'])
     .pipe(plugins.plumber())
-    .pipe(plugins.sourcemaps.init())
-    .pipe(plugins.sass())
+    .pipe(plugins.sass({
+      sourceMap: true,
+      outputStyle: 'compressed'
+    }))
     .pipe(plugins.autoprefixer({
       browsers: ['last 2 versions', 'ie >= 9']
     }))
-    .pipe(plugins.sourcemaps.write('.'))
     .pipe(gulp.dest('./dist/css'));
 });
 
@@ -79,10 +80,10 @@ gulp.task('browser-sync', ['build'], function() {
 
 gulp.task('build', ['scss', 'script', 'imagemin', 'pug', 'copyFontAwesome', 'GA_CNAME']);
 
-gulp.task('serve-dev', ['clean', 'build', 'browser-sync'], function () {
+gulp.task('serve', ['clean', 'build', 'browser-sync'], function () {
   gulp.watch('./source/scss/**/*.scss', ['scss', reload]);
   gulp.watch('./source/js/*.js', ['script', reload]);
   gulp.watch('./source/views/**/*.pug', ['pug', reload]);
 });
 
-gulp.task('default', ['serve-dev']);
+gulp.task('default', ['serve']);
