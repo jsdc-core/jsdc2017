@@ -63,7 +63,7 @@
     });
 
     setInterval(function(){
-      var specifyDay = new Date('2017/11/04 08:30:00').getTime();
+      var specifyDay = new Date('2017/09/30 23:59:59').getTime();
       var now = new Date().getTime();
       var diff = new Date(specifyDay - now).getTime();
       var util = {
@@ -78,7 +78,7 @@
       var hour = Math.floor((diff - (date * util.date)) / util.hour);
       var minute = Math.floor((diff - ((date * util.date) + (hour * util.hour))) / util.minute);
       var second = Math.floor((diff - ((date * util.date) + (hour * util.hour) + (minute * util.minute))) / util.second);
-      $('.final-countdown').text('倒數' + date + '天 ' + hour + ':' + minute + ':' + (second < 10? '0' + second:second));
+      $('.final-countdown').text('售票倒數' + date + '天 ' + hour + ':' + minute + ':' + (second < 10? '0' + second:second));
     }, 1000);
 
 })(jQuery);
