@@ -48,7 +48,7 @@ gulp.task('imagemin', function() {
       plugins.imagemin.jpegtran({progressive: true}),
       plugins.imagemin.optipng({optimizationLevel: 5}),
     ],
-    {verbose: true}
+    {verbose: false}
     ))
     .pipe(gulp.dest('./dist/images'))
 });
