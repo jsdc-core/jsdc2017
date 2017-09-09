@@ -30,19 +30,19 @@ block content
               each agendaContents, agendaIndex in rooms
                 li.event(data-date=agendaContents.time)
                   .row
-                    each content, index in agendaContents.list
-                      if (index === 'all')
+                    each content, contentIndex in agendaContents.list
+                      if (contentIndex === 'all')
                         .col-md-12
                           if (content.name)
                             h3 #{content.name}
                       else
-                        .col-md-6
-                          span.room(data-room=(index) class='room-'+index)
+                        .col-md-6(style="cursor:pointer;" onclick="agendaDetail('"+index+"',"+agendaIndex+","+contentIndex+")")
+                          span.room(data-room=(contentIndex) class='room-'+contentIndex)
 
                           if (content.speaker)
                             - var info = speakers[content.speaker];
                             .tag-groups
-                              each value, index in info.agenda.levels
+                              each value in info.agenda.levels
                                 span.event-level(data-level=agendaLevel[value] class=value)
 
                             h3 #{info.name}
@@ -52,14 +52,21 @@ block content
                             h3 #{content.name}
                           else
                             h3(style="border-bottom:none;") TBD
-                            p
+                            h4
                               | ---
 
+  script(src='./js/agenda.min.js')
+  script.
+    var agendaData = !{JSON.stringify(agenda)};
+    var speakerData = !{JSON.stringify(speakers)};
 
 block css
   link(rel='stylesheet', href='./css/timeline/timeline.css')
+  link(rel='stylesheet', href='./css/sweetalert2/sweetalert2.css')
 
 block js
+  script(src='./js/sweetalert2.min.js')
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js')
   script.
     setTimeout(function(){
       document.querySelectorAll('#navbar ul li')[5].classList.add('active');

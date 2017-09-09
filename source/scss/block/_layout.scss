@@ -578,11 +578,18 @@ body.is-loading {
   position: relative;
   padding: 63px 20px 0;
 
-  // #agenda-wrapper{
-  //   border: 1px solid #E0E0E0;
-  //   border-radius: _size(border-radius);
-  //   padding: 40px 30px;
-  // }
+  & ~ .swal2-container {
+    img {
+      border-radius: 50%;
+    }
+    button {
+      padding-top: 0;
+    }
+    .agenda-outline {
+      max-height: 100px;
+      overflow-y: auto;
+    }
+  }
 }
 
 #venue {
