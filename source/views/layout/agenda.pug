@@ -42,7 +42,8 @@ block content
                           if (content.speaker)
                             - var info = speakers[content.speaker];
                             .tag-groups
-                              span.event-lang #{languages[info.agenda.lang]}
+                              if (languages[info.agenda.lang])
+                                span.event-lang #{languages[info.agenda.lang]}
                               each value in info.agenda.levels
                                 span.event-level(data-level=agendaLevel[value] class=value)
 
