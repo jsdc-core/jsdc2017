@@ -10,7 +10,7 @@ before_install:
 - cp .travis/ssh_config ~/.ssh/config
 - git config --global user.name "JSDC Taiwan"
 - git config --global user.email hq@jsdc.tw
-- git clone -b gh-pages git@github.com:jsdc-core/jsdc2017.git dist .deploy
+- git clone -b gh-pages git@github.com:jsdc-core/jsdc2017.git .deploy
 install:
 - git checkout develop
 - npm install
