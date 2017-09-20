@@ -2,11 +2,7 @@
 # set -e # stop on error
 
 echo switch folder to deploy
-cd .deploy
-echo Remove all for .deploy
-rm -rf *
-echo copy dist folder to deploy
-cp -R ../dist/ .
+cd dist
 echo add new gh-pages files
 git add .
 echo commit changes
