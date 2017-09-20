@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "./node_modules/gulp/bin/gulp.js",
-    "deploy": "./deploy.sh"
+    "build": "./node_modules/gulp/bin/gulp.js build",
+    "deploy": "./deploy_local.sh",
+    "deploy:ci": "./deploy.sh"
   },
   "author": {
     "name": "JSDC Taiwan",

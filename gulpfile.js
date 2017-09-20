@@ -78,9 +78,10 @@ gulp.task('browser-sync', ['build'], function() {
   });
 });
 
-gulp.task('build', ['scss', 'script', 'imagemin', 'pug', 'copyFontAwesome', 'GA_CNAME']);
+gulp.task('compile', ['scss', 'script', 'imagemin', 'pug', 'copyFontAwesome', 'GA_CNAME']);
+gulp.task('build', ['clean', 'compile']);
 
-gulp.task('serve', ['clean', 'build', 'browser-sync'], function () {
+gulp.task('serve', ['build', 'browser-sync'], function () {
   gulp.watch('./source/scss/**/*.scss', ['scss', reload]);
   gulp.watch('./source/js/*.js', ['script', reload]);
   gulp.watch('./source/views/**/*.pug', ['pug', reload]);
