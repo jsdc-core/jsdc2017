@@ -1,6 +1,6 @@
 # jsdc2017
 
-## Travis CI
+### Build Status
 [![Build Status](https://travis-ci.org/jsdc-core/jsdc2017.svg?branch=develop)](https://travis-ci.org/jsdc-core/jsdc2017)
 
 ### :: step 1
