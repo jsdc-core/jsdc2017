@@ -65,7 +65,7 @@ gulp.task('copyFontAwesome', function(){
 
 // 清掉 dist 裡面 css 跟 js 的資料夾
 gulp.task('clean', function() {
-  return del(['./dist/css/*.css', './dist/css/*.css.map', './dist/js/*', '/dist/images/*']);
+  return del(['./dist/css/*.css', './dist/css/*.css.map', './dist/js/*', './dist/images/*', './dist/*.html']);
 });
 
 gulp.task('browser-sync', ['build'], function() {
