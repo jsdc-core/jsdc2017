@@ -9,18 +9,6 @@ $screen-md: 992px;
   #header {
     padding: 15vh 40px 0;
 
-    // .title {
-    //   height: 48vh;
-
-    //   h2 {
-    //     padding: 5% 0;
-    //   }
-    // }
-
-    // .actions {
-    //   margin-top: 7%;
-    // }
-
     .container {
       .title {
         .logo {
@@ -50,9 +38,9 @@ $screen-md: 992px;
       .count-down {
         .time-content {
           .date, .hours, .minutes, .seconds {
-            width: 100px;
-            height: 100px;
-            line-height: 100px;
+            width: 120px;
+            height: 120px;
+            line-height: 120px;
             font-size: 50px;
           }
           .hours {
@@ -141,7 +129,7 @@ $screen-md: 992px;
 }
 
 /* Medium devices (tables, 768px and up) */
-@media (min-width: $screen-sm) {
+@media (max-width: $screen-sm) {
 
   #header {
     padding: 12vh 0;
@@ -175,13 +163,13 @@ $screen-md: 992px;
       .count-down {
         .time-content {
           .date, .hours, .minutes, .seconds {
-            width: 100px;
-            height: 100px;
-            line-height: 100px;
+            width: 120px;
+            height: 120px;
+            line-height: 120px;
             font-size: 50px;
           }
           .hours {
-            margin-right: 0;
+            // margin-right: 20;
           }
           .minutes, .seconds {
             margin-top: 20px;
@@ -195,7 +183,7 @@ $screen-md: 992px;
     .ticket-container {
       .ticket-info {
         .ticket-1 {
-          width: 50%;
+          width: 75%;
         }
       }
     }
