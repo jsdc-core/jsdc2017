@@ -4,28 +4,68 @@ block content
   //- Header
   section#header
     .container
-      .inner
-        .title
-          img.image.img-responsive.lazy(itemprop="image" data-original='./images/jsdc-logo.png', alt='JSDC 2017')
-          h2 全民 Coder 時代
+      .title.row
+        .logo.col-md-6
+          img(src='./images/official/jsdc-logo.svg')
+        .jsdc-full-name.col-md-6
+          span JavaScript
+          span Develop
+          span Conference
+          span November 04-05, 2017
 
-        p.final-countdown.c-bold.c-font-white ---
-        .c-bold.c-font-white 今年 11 月 4 - 5 日正式登場
-        a(href="https://goo.gl/maps/dwvvEzHhQUQ2" data-mode="1" target="_blank" style="color: #fff")
-          i.fa.fa-map-marker(style="margin-right: 5px;")
-          | 臺灣大學 社會科學院
-        ul.actions
-          li
-            a.button(href='#news') 繼續探索
+      .slogan.row
+        .col-md-12
+          span Be
+          span  A
+          span  Co
+          span der
+      .count-down.row
+        .content.col-md-12
+          | count down
+        .clearfix
+        .time-content
+          .date
+            | --
+          .hours
+            | --
+          .minutes
+            | --
+          .seconds
+            | --
+        .conference-and-count-down-info
+          .info
+            | 2017 年 11 月 4 - 5 正式登場
+          .position
+            | 臺灣大學 社會科學院
 
-  section#news
-    #news-line
+  section#ticket
     .container
-      .row#news-wrapper
-        .col-xs-12
-          header.major.text-center
+      .row
+        .col-md-12
+          header.text-center
             h2 售票資訊
-        .news-container
+      .ticket-container.row
+        .ticket-info.col-md-12
+          .ticket-1
+            h3 JSDC 2017 一般票
+            h4 November 04-05, 2017
+            .ticket-price
+              | NTD 3,950
+            a.ticket-booking(href="https://kktix.com/events/jsdc2017/registrations/new", target="_blank")
+              | BOOK NOW
+        //- .ticket-info.col-md-4
+        //-   h3 JSDC 2017 學生票
+        //-   .ticket-status
+        //-     h4 sold out
+        //-   .ticket-price
+        //-     h4 NTD 1,200 / 0
+        //- .ticket-info.col-md-4
+        //-   h3 JSDC 2017 早鳥票
+        //-   .ticket-status
+        //-     h4 sold out
+        //-   .ticket-price
+        //-     h4 NTD 3,490
+
           iframe.kktix(src='https://kktix.com/tickets_widget?slug=jsdc2017', frameborder='0', height='380px', width='100%', vspace='0', hspace='0', marginheight='5', marginwidth='5', scrolling='auto', allowtransparency='true')
 
 block js

@@ -1,44 +1,38 @@
-/*
-	Photon by HTML5 UP
-	html5up.net | @n33co
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
-
 (function($) {
 
-    skel.breakpoints({
-      xlarge: '(max-width: 1680px)',
-      large: '(max-width: 1140px)',
-      medium: '(max-width: 980px)',
-      small: '(max-width: 736px)',
-      xsmall: '(max-width: 480px)',
-      xxsmall: '(max-width: 320px)'
-    });
+    // skel.breakpoints({
+    //   xlarge: '(max-width: 1680px)',
+    //   large: '(max-width: 1140px)',
+    //   medium: '(max-width: 980px)',
+    //   small: '(max-width: 736px)',
+    //   xsmall: '(max-width: 480px)',
+    //   xxsmall: '(max-width: 320px)'
+    // });
 
-    $(function() {
+    // $(function() {
 
-      var $window = $(window),
-          $body = $('body');
+    //   var $window = $(window),
+    //       $body = $('body');
 
-      // Disable animations/transitions until the page has loaded.
-      $body.addClass('is-loading');
+    //   // Disable animations/transitions until the page has loaded.
+    //   $body.addClass('is-loading');
 
-      $window.on('load', function() {
-          window.setTimeout(function() {
-              $body.removeClass('is-loading');
-          }, 250);
-      });
+    //   $window.on('load', function() {
+    //       window.setTimeout(function() {
+    //           $body.removeClass('is-loading');
+    //       }, 250);
+    //   });
 
-      // Fix: Placeholder polyfill.
-      $('form').placeholder();
+    //   // Fix: Placeholder polyfill.
+    //   $('form').placeholder();
 
-      // Prioritize "important" elements on mobile.
-      skel.on('+mobile -mobile', function() {
-        $.prioritize(
-          '.important\\28 mobile\\29',
-          skel.breakpoint('mobile').active
-        );
-      });
+    //   // Prioritize "important" elements on mobile.
+    //   skel.on('+mobile -mobile', function() {
+    //     $.prioritize(
+    //       '.important\\28 mobile\\29',
+    //       skel.breakpoint('mobile').active
+    //     );
+    //   });
 
       // Scrolly 目前看起來還用不到，所以先隱藏起來
       // $('.scrolly').scrolly();
@@ -52,33 +46,37 @@
       //   "./images/jsdc-scenario-5.jpg",
       // ], {duration: 3000, fade: 1200, lazyload: true,});
 
-      // lazyload
-      $('div.lazy').lazyload({
-        effect : 'fadeIn'
-      });
-      $('img.lazy').lazyload({
-        effect : 'fadeIn'
-      });
+    //   // lazyload
+    //   $('div.lazy').lazyload({
+    //     effect : 'fadeIn'
+    //   });
+    //   $('img.lazy').lazyload({
+    //     effect : 'fadeIn'
+    //   });
 
-    });
+    // });
 
-    setInterval(function(){
-      var specifyDay = new Date('2017/09/30 23:59:59').getTime();
-      var now = new Date().getTime();
-      var diff = new Date(specifyDay - now).getTime();
-      var util = {
-        second: 1000,
-        minute: 1000*60,
-        hour: 1000*60*60,
-        date: 1000*60*60*24,
-      }
-      // var year = diff.getFullYear();
-      // var month = diff.getMonth() + 1;
-      var date = Math.floor(diff / util.date);
-      var hour = Math.floor((diff - (date * util.date)) / util.hour);
-      var minute = Math.floor((diff - ((date * util.date) + (hour * util.hour))) / util.minute);
-      var second = Math.floor((diff - ((date * util.date) + (hour * util.hour) + (minute * util.minute))) / util.second);
-      $('.final-countdown').text('售票倒數' + date + '天 ' + hour + ':' + minute + ':' + (second < 10? '0' + second:second));
-    }, 1000);
+    if (location.pathname === '/')
+      setInterval(function(){
+        var specifyDay = new Date('2017/09/30 23:59:59').getTime();
+        var now = new Date().getTime();
+        var diff = new Date(specifyDay - now).getTime();
+        var util = {
+          seconds: 1000,
+          minutes: 1000*60,
+          hours: 1000*60*60,
+          date: 1000*60*60*24,
+        }
+
+        var date = Math.floor(diff / util.date);
+        var hours = Math.floor((diff - (date * util.date)) / util.hours);
+        var minutes = Math.floor((diff - ((date * util.date) + (hours * util.hours))) / util.minutes);
+        var seconds = Math.floor((diff - ((date * util.date) + (hours * util.hours) + (minutes * util.minutes))) / util.seconds);
+
+        $('.date').text(date.toString().length === 1?'0'+ date:date);
+        $('.hours').text(hours.toString().length === 1?'0'+ hours:hours);
+        $('.minutes').text(minutes.toString().length === 1?'0'+ minutes:minutes);
+        $('.seconds').text(seconds.toString().length === 1?'0'+ seconds:seconds);
+      }, 1000);
 
 })(jQuery);
