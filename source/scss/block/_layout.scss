@@ -15,15 +15,26 @@ $jsdc-b: #3096b2;
 }
 
 body{
-  /*font-family: 'Montserrat', sans-serif;*/
-  font-family: "微軟正黑體", 'Open Sans', sans-serif;
+  // font-family: "微軟正黑體", 'Open Sans', sans-serif;
+  font-family: 'Varela Round', '微軟正黑體', 'Open Sans', sans-serif;
+
+  .jsdc-background {
+    background-image: url('../images/official/jsdc-background.png');
+    background-size: 100px;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
 }
 
 /* Start form small devices */
 
 #navbar {
-  background-color: rgba(103, 103, 103, 0.6);
-  border-radius: 0;
+  background-color: rgba(255, 255, 255, 0.6);
+  @include vendor('border-radius', '0');
   border-bottom: none;
   margin: 0;
   position: fixed;
@@ -37,8 +48,8 @@ body{
     border: 1px solid gray;
   }
   .navbar-brand img {
-    width: 80%;
-    background-color: rgba(169, 169, 169, 0.45);
+    width: 30px;
+    margin-top: -5px;
   }
 
   .navbar-collapse[aria-expanded=false] {
@@ -47,6 +58,7 @@ body{
 
   .navbar-collapse[aria-expanded=true] {
     display: block;
+    background-color: rgba(255, 255, 255, 1);
   }
 
   li {
@@ -54,7 +66,7 @@ body{
     z-index: 9999;
 
     a {
-      color: white;
+      color: gray;
 
       &:hover {
         color: #0089ac;
@@ -76,136 +88,171 @@ body{
 #header {
   position: relative;
   overflow: hidden;
-  text-align: center;
-  height: 100vh;
+  // text-align: center;
+  height: 100%;
   padding: 13vh 20px 0;
-  background-image: url('../images/jsdc-scenario-1.jpg');
 
-  .image{
-    -webkit-filter: drop-shadow(0px 5px 10px rgba(#777, 0.5));
-    filter:         drop-shadow(0px 5px 10px rgba(#777, 0.5));
-    max-width: 400px;
-    width: 100%;
-    opacity: 0.8;
-  }
+  .container {
+    .title {
+      height: 150px;
+      margin-top: 30px;
 
-  .title{
-    height: 45vh;
-    h1,
-    h2,
-    h5 {
-      text-shadow: 0 2px 5px #777;
-      color: white;
-      margin: 0;
-    }
-    h2 {
-      font-weight: bold;
-      font-size: 26px;
-      padding: 5% 0 10%;
-    }
-    h5 {
-      font-family: 'Courier New', Courier, monospace;
-      color: white;
-      line-height: 1;
+      .logo {
+        text-align: right;
+        height: 100%;
 
-      span{
-        font-size: 22px;
-        color: white;
+        & > img {
+          height: 100%;
+          margin-right: 60px;
+        }
+      }
+      .jsdc-full-name {
+        text-align: left;
+        margin-left: -75px;
+
+        span {
+          display: block;
+          width: 275px;
+          font-size: 3rem;
+          line-height: 3.3rem;
+          cursor: default;
+
+          &:nth-of-type(1) {
+            letter-spacing: calc(1rem + 2px);
+          }
+          &:nth-of-type(2) {
+            letter-spacing: calc(2rem + 3px);
+          }
+          &:nth-of-type(3) {
+            letter-spacing: calc(1rem + 0.5px);
+          }
+
+          &:last-child {
+            font-size: 2.5rem;
+            letter-spacing: -0.02rem;
+          }
+        }
       }
     }
-  }
+    .slogan {
+      text-align: center;
+      cursor: default;
+      margin-top: 40px;
 
-  p {
-    margin: 10px 0 0;
-    font-size: 20px;
-    line-height: 1.5;
-  }
-  span{
-    font-size: 18px;
-    color: #F5F5F5;
-    i{
-      margin-right: 10px;
-    }
-  }
+      span {
+        text-align: center;
+        font-size: 8rem;
 
-  .actions {
-    position: relative;
-    margin-top: 10vw;
-    .button{
-      box-shadow: inset 0 0 0 1px white;
-      font-size: 18px;
-      color: white;
-      &:visited{
-        color: white;
-        text-decoration: none;
+        &:nth-of-type(1) {
+          color: #FFBF00;
+        }
+        &:nth-of-type(2) {
+          color: #E83F6F;
+        }
+        &:nth-of-type(3) {
+          color: #2274A5;
+        }
+        &:nth-of-type(4) {
+          color: #32936F;
+        }
       }
-      &:hover{
-        color: #777;
-        text-decoration: none;
+
+      &:hover {
+        & span {
+          color: #4CC1FC;
+        }
       }
     }
+    .count-down {
+      text-align: center;
+      font-size: 3rem;
+      margin-top: 80px;
 
-    &:after {
-      background: _palette(dark, border);
-      content: '';
-      height: 100vh;
-      left: 50%;
-      position: absolute;
-      top: 100%;
-      width: 1px;
+      .content {
+        text-transform:uppercase;
+      }
+      .time-content {
+        margin-top: 20px;
+
+        .date, .hours, .minutes, .seconds {
+          width: 150px;
+          height: 150px;
+          line-height: 150px;
+          color: white;
+          font-size: 90px;
+          display: inline-block;
+          margin-right: 40px;
+
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+        .date {
+          background-image: url('../images/official/count-down-1.svg');
+        }
+        .hours {
+          background-image: url('../images/official/count-down-2.svg');
+        }
+        .minutes {
+          background-image: url('../images/official/count-down-3.svg');
+        }
+        .seconds {
+          background-image: url('../images/official/count-down-4.svg');
+        }
+      }
+      .conference-and-count-down-info {
+        font-size: 1.5rem;
+        margin-top: 30px;
+      }
     }
-  }
-
-  .inner {
-    @include vendor('transition', ('transform 1.5s ease', 'opacity 2s ease'));
-    @include vendor('transition-delay', '0.25s');
-    @include vendor('transform', 'scale(1)');
-    opacity: 1;
-    position: relative;
-    z-index: 1;
-
-    .actions {
-      @include vendor('transition', 'transform 1.25s ease');
-      @include vendor('transition-delay', '1s');
-      @include vendor('transform', 'translateY(0)');
-      opacity: 1;
-    }
-  }
-
-  &:after {
-    @include vendor('transition', 'opacity 1s ease');
-    background-image: linear-gradient(135deg, #eee, white);
-    content: '';
-    height: 100%;
-    left: 0;
-    opacity: 0.6;
-    position: absolute;
-    top: 0;
-    width: 100%;
   }
 }
 
-body.is-loading {
-  #header {
-    .inner {
-      @include vendor('transform', 'scale(1.05)');
-      opacity: 0;
+/* Ticket */
+#ticket {
+  margin-top: 60px;
 
-      .actions {
-        @include vendor('transform', 'translateY(30em)');
-        opacity: 0;
+  .ticket-container {
+
+    .ticket-info {
+      .ticket-1 {
+        width: 25%;
+        margin: 0 auto;
+        text-align: left;
+        padding: 15px;
+        border: 2px dashed rgba(51, 51, 51, 0.5);
+
+        .ticket-price, .ticket-booking {
+          display: inline-block;
+        }
+
+        .ticket-price {
+          margin-right: 20px;
+        }
+        .ticket-booking {
+          border: 1px solid;
+          padding: 0 10px;
+          border-radius: 30px;
+          text-decoration: none;
+
+          &:hover {
+            cursor: pointer;
+            background-color: #4CC1FC;
+            color: white;
+          }
+        }
+
+        h3, h4 {
+          border-bottom: 1px solid;
+        }
       }
-    }
-
-    &:after {
-      opacity: 1;
     }
   }
 }
 
 /* News */
 #news{
-  background-color: white;
+  // background-color: white;
   // background-image:url('images/overlay3.svg');
   background-position: right top;
   background-repeat: no-repeat;
@@ -214,7 +261,7 @@ body.is-loading {
   padding: 60px 20px 0;
 
   #news-wrapper{
-    border: 1px solid #E0E0E0;
+    // border: 1px solid #E0E0E0;
     border-radius: _size(border-radius);
     padding: 40px 30px;
   }
@@ -299,7 +346,7 @@ body.is-loading {
 
 /* About */
 #about{
-  background-color: white;
+  // background-color: white;
   // background-image:url('images/overlay3.svg');
   // background-position: right top;
   // background-repeat: no-repeat;
@@ -308,7 +355,7 @@ body.is-loading {
   padding: 60px 20px 0;
 
   #about-jsdc{
-    border: 1px solid $jsdc-y;
+    border-bottom: 1px solid $jsdc-y;
     border-radius: _size(border-radius);
     padding: 60px 15px;
 
@@ -571,7 +618,7 @@ body.is-loading {
 
 /* Agenda */
 #agenda{
-  background-color: white;
+  // background-color: white;
   background-position: right top;
   background-repeat: no-repeat;
   background-size: contain;
@@ -614,4 +661,8 @@ body.is-loading {
 #jobs {
   position: relative;
   padding: 75px 10% ;
+
+  .botui-container {
+    background-color: transparent;
+  }
 }
