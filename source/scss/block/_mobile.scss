@@ -197,14 +197,6 @@ $screen-md: 992px;
       padding: 40px 60px;
     }
 
-    .date{
-      width: 60px;
-      height: 60px;
-      padding: 5px 0 0;
-      span{
-        display: block;
-      }
-    }
     .news-container{
       .news{
         padding: 16px 0;
@@ -309,6 +301,15 @@ $screen-md: 992px;
 
     #news-wrapper{
       padding: 60px 80px;
+    }
+
+    .date{
+      width: 60px;
+      height: 60px;
+      padding: 5px 0 0;
+      span{
+        display: block;
+      }
     }
 
     .major{
