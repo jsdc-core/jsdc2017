@@ -17,5 +17,8 @@ install:
 script:
 - npm run build
 - npm run deploy:ci
+branches:
+  only:
+  - develop
 notifications:
   email: false
