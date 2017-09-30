@@ -58,7 +58,7 @@
 
     if (location.pathname === '/')
       setInterval(function(){
-        var specifyDay = new Date('2017/09/30 23:59:59').getTime();
+        var specifyDay = new Date('2017/10/01 23:59:59').getTime();
         var now = new Date().getTime();
         var diff = new Date(specifyDay - now).getTime();
         var util = {
