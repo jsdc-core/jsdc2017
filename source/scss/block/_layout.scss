@@ -572,49 +572,49 @@ body{
 }
 
 /* Sponsor */
-#sponsor{
-  position: relative;
-  padding: 80px 10%;
+// #sponsor{
+//   position: relative;
+//   padding: 80px 10%;
 
-  .major {
-    h2{
-      color: $jsdc-b - #111;
-      font-size: 26px;
-    }
-    &:after {
-      background: $jsdc-b;
-    }
-  }
+//   .major {
+//     h2{
+//       color: $jsdc-b - #111;
+//       font-size: 26px;
+//     }
+//     &:after {
+//       background: $jsdc-b;
+//     }
+//   }
 
-  .typeform-button {
-    box-shadow: inset 0 0 0 1px $jsdc-b;
-    background-color: white;
-    color: $jsdc-b - #222;
-    position: relative;
-    z-index: 1;
-    display: block;
-    margin: 0 auto;
-    font-size: 20px;
-    &:hover {
-      background-color: $jsdc-b;
-      box-shadow: inset 0 0 0 0 $jsdc-b;
-      text-decoration: none;
-      color: white;
-    }
-  }
-  #sponsor-line{
-    position: absolute;
-    top: 58%;
-    left: 0;
-    &:after {
-      background: $jsdc-b;
-      content: '';
-      display: inline-block;
-      height: 1px;
-      width: 100vw;
-    }
-  }
-}
+//   .typeform-button {
+//     box-shadow: inset 0 0 0 1px $jsdc-b;
+//     background-color: white;
+//     color: $jsdc-b - #222;
+//     position: relative;
+//     z-index: 1;
+//     display: block;
+//     margin: 0 auto;
+//     font-size: 20px;
+//     &:hover {
+//       background-color: $jsdc-b;
+//       box-shadow: inset 0 0 0 0 $jsdc-b;
+//       text-decoration: none;
+//       color: white;
+//     }
+//   }
+//   #sponsor-line{
+//     position: absolute;
+//     top: 58%;
+//     left: 0;
+//     &:after {
+//       background: $jsdc-b;
+//       content: '';
+//       display: inline-block;
+//       height: 1px;
+//       width: 100vw;
+//     }
+//   }
+// }
 
 /* Agenda */
 #agenda{
@@ -656,6 +656,24 @@ body{
 #sponsors {
   position: relative;
   padding: 75px 10% ;
+
+  .company-name {
+    &:first-child {
+      margin: 1em 0 0;
+    }
+
+    margin: 2em 0 0;
+  }
+
+  .company-logo {
+    width: 100%;
+    margin-bottom: 1em;
+  }
+
+  .company-description {
+    max-height: 250px;
+    overflow-y: auto;
+  }
 }
 
 #jobs {

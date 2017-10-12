@@ -56,27 +56,27 @@
 
     // });
 
-    if (location.pathname === '/')
-      setInterval(function(){
-        var specifyDay = new Date('2017/10/01 23:59:59').getTime();
-        var now = new Date().getTime();
-        var diff = new Date(specifyDay - now).getTime();
-        var util = {
-          seconds: 1000,
-          minutes: 1000*60,
-          hours: 1000*60*60,
-          date: 1000*60*60*24,
-        }
+    // if (location.pathname === '/')
+      // setInterval(function(){
+      //   var specifyDay = new Date('2017/10/01 23:59:59').getTime();
+      //   var now = new Date().getTime();
+      //   var diff = new Date(specifyDay - now).getTime();
+      //   var util = {
+      //     seconds: 1000,
+      //     minutes: 1000*60,
+      //     hours: 1000*60*60,
+      //     date: 1000*60*60*24,
+      //   }
 
-        var date = Math.floor(diff / util.date);
-        var hours = Math.floor((diff - (date * util.date)) / util.hours);
-        var minutes = Math.floor((diff - ((date * util.date) + (hours * util.hours))) / util.minutes);
-        var seconds = Math.floor((diff - ((date * util.date) + (hours * util.hours) + (minutes * util.minutes))) / util.seconds);
+      //   var date = Math.floor(diff / util.date);
+      //   var hours = Math.floor((diff - (date * util.date)) / util.hours);
+      //   var minutes = Math.floor((diff - ((date * util.date) + (hours * util.hours))) / util.minutes);
+      //   var seconds = Math.floor((diff - ((date * util.date) + (hours * util.hours) + (minutes * util.minutes))) / util.seconds);
 
-        $('.date').text(date.toString().length === 1?'0'+ date:date);
-        $('.hours').text(hours.toString().length === 1?'0'+ hours:hours);
-        $('.minutes').text(minutes.toString().length === 1?'0'+ minutes:minutes);
-        $('.seconds').text(seconds.toString().length === 1?'0'+ seconds:seconds);
-      }, 1000);
+      //   $('.date').text(date.toString().length === 1?'0'+ date:date);
+      //   $('.hours').text(hours.toString().length === 1?'0'+ hours:hours);
+      //   $('.minutes').text(minutes.toString().length === 1?'0'+ minutes:minutes);
+      //   $('.seconds').text(seconds.toString().length === 1?'0'+ seconds:seconds);
+      // }, 1000);
 
 })(jQuery);
