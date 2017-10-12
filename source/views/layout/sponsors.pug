@@ -1,15 +1,6 @@
 extends ../partials/_layout
 
 block content
-  mixin createSponsorContent(col, data)
-    div
-      | #{JSON.stringify(data)}
-    a.sponsor-area(class="col-md-"+col+" col-xs-12" style="text-decoration:none;"+(data.style?data.style:"") href=data.link title=data.company+(data.description?"\n\n"+data.description:"") target="_blank")
-      img.company-logo(src=data.logo)
-      if col > 2
-        .company-description
-          | #{data.description}
-
   .container-fluid#sponsors
     each sponsorItems, sponsorIndex in sponsors
       if sponsorItems.length > 0
@@ -17,7 +8,11 @@ block content
           .col-md-12.col-xs-12
             h2.company-name #{tranformName[sponsorIndex].name || sponsorIndex.toUpperCase()}
           each item, index in sponsorItems
-            +createSponsorContent(tranformName[sponsorIndex].col, item)
+            a.sponsor-area(class="col-md-"+tranformName[sponsorIndex].col+" col-xs-12" style="text-decoration:none;"+(item.style?item.style:"") href=item.link title=item.company+(item.description?"\n\n"+item.description:"") target="_blank")
+              img.company-logo(src=item.logo)
+              if tranformName[sponsorIndex].col > 2
+                .company-description
+                  | #{item.description}
 
 block js
   script.
