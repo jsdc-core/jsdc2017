@@ -118,11 +118,19 @@ $screen-md: 992px;
   }
 
   /* Sponsor */
-  #sponsor{
+  #sponsors{
     padding: 80px 60px;
-    .major {
-      h2{
-        font-size: 28px;
+    .sponsor-area {
+      &:not(:first-of-type) {
+        margin-top: 30px;
+      }
+
+      .company-description {
+        padding: 0 5px;
+        border-radius: 0 0 10px 10px;
+        border-bottom: 2px solid #aeaeae;
+        border-left: 2px solid #aeaeae;
+        border-right: 2px solid #aeaeae;
       }
     }
   }

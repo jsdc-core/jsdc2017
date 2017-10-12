@@ -2,7 +2,7 @@ extends ../partials/_layout
 
 block content
   mixin createSponsorContent(col, data)
-    a(class="col-md-"+col+" col-xs-"+col style="text-decoration:none;"+(data.style?data.style:"") href=data.link title=data.company+(data.description?"\n\n"+data.description:"") target="_blank")
+    a.sponsor-area(class="col-md-"+col+" col-xs-12" style="text-decoration:none;"+(data.style?data.style:"") href=data.link title=data.company+(data.description?"\n\n"+data.description:"") target="_blank")
       img.company-logo(src=data.logo)
       if col > 2
         .company-description
