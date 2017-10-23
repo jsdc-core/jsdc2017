@@ -50,6 +50,8 @@ block content
                             h3 #{info.name}
                             h4
                               | #{info.agenda.title}
+                            if (info.agenda.title2) 
+                              h4 #{info.agenda.title2}
                           else if (content.name)
                             h3 #{content.name}
                           else
