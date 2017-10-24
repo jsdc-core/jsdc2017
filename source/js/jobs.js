@@ -13,6 +13,31 @@
         },
       ]
     },
+    {
+      text: '104 資訊科技',
+      value: '104',
+      jobs: [
+        {
+          text: '資深前端工程師 (Sr.Front-End Web Developer)',
+          value: 'F2E',
+          intro: ['薪資：具市場競爭性，內部公平性的薪酬制度', '條件：React、Vue、Angular 其中一項且具有 SEO、RWD、前端模組開發經驗', '福利：員工持股信託、年度調薪', '其他：JSDC 2017 活動攤位攜帶履歷可現場快速面試，錄取者提供 20,000 獎金'],
+          url: 'https://github.com/jsdc-core/jsdc2017/issues/6'
+        },
+      ]
+    },
+    {
+      text: 'Carousell 旋轉拍賣',
+      value: 'carousell',
+      jobs: [
+        {
+          text: 'Software Engineer, Frontend Web (Taiwan) 前端工程師',
+          value: 'F2E',
+          intro: ['薪資：NTD$ 77,000-154,000/月 (約新幣 3.5-7K)', '條件：React、Flux、Webpack 且具有優化前端效能、團體合作的經驗', '福利：可在旋轉拍賣任一海外辦公室 Remote work 、認股權…', '其他：應徵要準備英文履歷、英文面試', '想知道更多資訊可以到下方『詳細職缺資訊』觀看！'],
+          url: 'https://github.com/jsdc-core/jsdc2017/issues/7',
+          sendCV: 'http://caro.sl/JSDC2017'
+        },
+      ]
+    },
   ];
   var jobCount = 0;
   companys.forEach(function(company){
@@ -84,7 +109,7 @@
         return botui.message.add({
           // type: 'embed',
           delay: 1000,
-          content: '<i class="fa fa-hand-o-right" style="marign-bottom:20px;"><a href="'+result.url+'" target="_blank"> 詳細職缺資訊</a><br><br><br><i class="fa fa-hand-o-right" style="marign-bottom:20px;"><a href="javascript:jobsBot();">了解其他職缺</a>'
+          content: (result.sendCV?'<i class="fa fa-hand-o-right" style="marign-bottom:20px;"><a href="'+result.sendCV+'" target="_blank"> 直接投履歷</a><br><br><br>':'')+'<i class="fa fa-hand-o-right" style="marign-bottom:20px;"><a href="'+result.url+'" target="_blank"> 詳細職缺資訊</a><br><br><br><i class="fa fa-hand-o-right" style="marign-bottom:20px;"><a href="javascript:jobsBot();">了解其他職缺</a>'
         });
       }
     });
