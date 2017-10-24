@@ -1,0 +1,15 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/node:6.11.3
+    machine:
+      enabled: false
+    branches:
+      only:
+        - featrue/change_ci
+    resource_class: medium
+    working_directory: ~/
+    steps:
+      - checkout
+      - run: yarn install
