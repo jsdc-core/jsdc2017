@@ -38,6 +38,18 @@
         },
       ]
     },
+    {
+      text: 'Pinkoi',
+      value: 'pinkoi',
+      jobs: [
+        {
+          text: 'Frontend Engineer',
+          value: 'F2E',
+          intro: ['薪資：能力 + 態度', '條件：React、Sass、Webpack ，了解跨瀏覽器間會碰到的問題，有使用過 FB 、Google API 經驗'],
+          url: 'https://www.pinkoi.com/about/careers#frontend-engineer',
+        },
+      ]
+    },
   ];
   var jobCount = 0;
   companys.forEach(function(company){
