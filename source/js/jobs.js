@@ -50,6 +50,18 @@
         },
       ]
     },
+    {
+      text: 'Dcard',
+      value: 'dcard',
+      jobs: [
+        {
+          text: 'Senior Web Frontend Developer',
+          value: 'F2E',
+          intro: ['薪資：60,000 - 100,000，或依經驗與能力面議', '條件：熟 React、Redux、CSS3、 Git，有 SEO 經驗、網頁速度最佳化、據 UI/UX 敏感度、有豐富 Mobile Web 開發經驗等佳', '福利：每周三遠端工作日、彈性工作、各項補助'],
+          url: 'https://github.com/jsdc-core/jsdc2017/issues/8',
+        },
+      ]
+    },
   ];
   var jobCount = 0;
   companys.forEach(function(company){
@@ -121,7 +133,7 @@
         return botui.message.add({
           // type: 'embed',
           delay: 1000,
-          content: (result.sendCV?'<i class="fa fa-hand-o-right" style="marign-bottom:20px;"><a href="'+result.sendCV+'" target="_blank"> 直接投履歷</a><br><br><br>':'')+'<i class="fa fa-hand-o-right" style="marign-bottom:20px;"><a href="'+result.url+'" target="_blank"> 詳細職缺資訊</a><br><br><br><i class="fa fa-hand-o-right" style="marign-bottom:20px;"><a href="javascript:jobsBot();">了解其他職缺</a>'
+          content: '想了解更多就點開下方詳細資訊吧！<br><br>'+(result.sendCV?'<i class="fa fa-hand-o-right" style="marign-bottom:20px;"><a href="'+result.sendCV+'" target="_blank"> 直接投履歷</a><br><br><br>':'')+'<i class="fa fa-hand-o-right" style="marign-bottom:20px;"><a href="'+result.url+'" target="_blank"> 詳細職缺資訊</a><br><br><br><i class="fa fa-hand-o-right" style="marign-bottom:20px;"><a href="javascript:jobsBot();">了解其他職缺</a>'
         });
       }
     });
